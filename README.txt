@@ -1,4 +1,7 @@
-Pour pouvoir jouer:
+Pour jouer en ligne:
+	Allez sur https://paulux06.github.io !
+
+Pour jouer en local:
     - Installer NodeJS:
 
         - Windows:
