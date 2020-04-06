@@ -1,5 +1,68 @@
-div#TopBar {
-    width: 100vw;
-    height: 50px;
-    position: fixed;
+@keyframes hovering-out {
+    0% {
+        transform: translateY(-65%);
+    }
+    100% {
+        transform: translateY(-55%);
+    }
+}
+
+@keyframes hovering-in {
+    0% {
+        transform: translateY(-55%);
+    }
+    100% {
+        transform: translateY(-65%);
+    }
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+div#main {
+
+}
+
+div#topBar {
+    width: 98vw;
+    height: 40px;
+    margin-left: 1vw;
+    background-color: rgb(40, 40, 40);
+    border-radius: 1vh;
+}
+
+img#icon {
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: inline-flex;
+}
+
+h1#title {
+    font-family: Calibri;
+    font-size: 20px;
+    display: inline-flex;
+    color: white;
+    transform: translateY(-37%);
+}
+
+a#title {
+    font-family: Calibri;
+    font-size: 15px;
+    display: inline-flex;
+    color: white;
+    transform: translateY(-55%);
+    margin-left: 20px;
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-width: 2px;
+    animation: hovering-out 250ms ease-in-out forwards;
+}
+
+a#title:hover {
+    animation: hovering-in 250ms ease-in-out forwards;
 }
