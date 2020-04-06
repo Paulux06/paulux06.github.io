@@ -1,0 +1,5 @@
+div#TopBar {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+}
