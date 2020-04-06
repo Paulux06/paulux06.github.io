@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>HEEEYYYY</title>
+    <meta charset="UTF-">
+    <script src="./socket_io.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="favicon.ico" />
+    <script src="./script.js"></script>
+    <title>EsGa</title>
 </head>
-<body>
-    <p>Oh hea mstr crab !</p>
+<body onload="setup()" id='body'>
+    <div id='interface'>
+        <p id='title'>Esga</p>
+        <p id='label'>Entrez votre nom:</p>
+        <input id='nameValue' type="text" value='' autofocus='autofocus'>
+        <input id='button' type="button" value='Jouer' onclick="start()">
+        <img id='player' src="./ressources/PlayerMenu.png" alt="player">
+    </div>
+    <canvas id='screen'></canvas>
 </body>
 </html>

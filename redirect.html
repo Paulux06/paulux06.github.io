@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirection</title>
+    <style>
+        body {
+            display: block;
+            align-content: center;
+            padding-right: auto;
+            padding-left: auto;
+            text-align: center;
+            background-color: rgb(50, 50, 50);
+        }
+        h6 {
+            text-align: center;
+            color: rgb(0, 140, 190);
+            background-color: rgb(40, 40, 40);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            border: solid;
+            border-color: rgb(0, 140, 190);
+            border-width: 0.5vh;
+            box-shadow: 0vw 1vh 10px rgb(0, 140, 190);
+            border-radius: 1vh;
+            padding: 1vh;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(0, 140, 190);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            border: none;
+            padding: 1vh;
+        }
+        input {
+            border: solid;
+            box-shadow: 0vw 0.5vh 10px rgb(0, 140, 190);
+            border-color: rgb(0, 140, 190);
+            background-color: rgb(40, 40, 40);
+            border-radius: 1vh;
+            padding: 0.4vh;
+            text-align: center;
+            font-size: larger;
+            color: rgb(0, 140, 190);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script>
+        window.addEventListener('keydown', function(event) {
+            if (event.keyCode == 13) {
+                redirect();
+            }
+        })
+        function redirect() {
+            adress = document.getElementById('adress').value;
+            window.location.href = 'http://'+adress;
+        }
+    </script>
+</head>
+<body>
+    <h6 id='Redirect'>Redirection</h6>
+    <h1 id='title'>Entrez l'URL de redirection:</h1>
+    <input id='adress' type="text" value='10.13.27.20'>
+</body>
+</html>
