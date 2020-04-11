@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Paulux | Site officiel</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
 <body>
-    <div id="main">
-        <div id="topBar">
-            <img src="./ressources/icon.png" alt="icon" id="icon">
-            <h1 id="title">Paulux</h1>
-            <a href="./index.html" id="title">Acceuil</a>
+    <div id="content">
+        <div id="header">
+            <img id="headerHome" src="./ressources/icon.png" alt="icone" onclick="home()">
+            <div id="headerOption">
+                <a id="headerOption" href="./projects/index.html">Mes projets</a>
+                <a id="headerOption" href="./reseaux/index.html">Reseaux</a>
+                <a id="headerOption" href="./more/index.html">A propos</a>
+            </div>
+            <div id="black line"></div>
         </div>
     </div>
 </body>
