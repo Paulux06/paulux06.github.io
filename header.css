@@ -3,31 +3,10 @@
     src: url('./ressources/Lemon-Regular.ttf');
 }
 
-@keyframes hovering-out {
-    0% {
-        border-bottom-width: 2px;
-    }
-    100% {
-        border-bottom-width: 0px;
-    }
-}
-
-@keyframes hovering-in {
-    0% {
-        border-bottom-width: 0px;
-    }
-    100% {
-        border-bottom-width: 2px;
-    }
-}
-
 body {
     margin: 0px;
     padding: 0px;
-}
-
-div#content {
-    background-color: white;
+    background-color: rgb(40, 40, 40);
 }
 
 div#header {
@@ -72,11 +51,8 @@ a#headerOption {
     border-bottom-style: solid;
     border-color: rgba(255, 255, 255, 0);
     transition: border-bottom-color 200ms ease-in-out;
-
 }
 
 a#headerOption:hover {
     border-bottom-color: rgba(255, 255, 255, 1);
 }
-
-/* FIN HEADER */

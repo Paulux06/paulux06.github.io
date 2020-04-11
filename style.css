@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Cocogoose Bold";
+    src: url("./ressources/Cocogoose_Pro.ttf");
+}
+
+@font-face {
+    font-family: "Cocogoose Light";
+    src: url("./ressources/Cocogoose_Light.ttf");
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+div#page {
+    padding: 80px;
+}
+
+h1#pageTitle {
+    text-align: center;
+    font-family: "Cocogoose Bold";
+    font-size: 40px;
+    background: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-image-source: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
+    border-image-slice: 1;
+    animation: fade-in 200ms ease-in-out;
+}
+
+h2#info {
+    text-align: center;
+    font-family: "Cocogoose Bold";
+    font-size: 20px;
+    background: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fade-in 400ms ease-in-out;
+}

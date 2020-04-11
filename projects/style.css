@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Cocogoose Bold";
+    src: url('../ressources/Cocogoose_Pro.ttf');
+}
+
+@font-face {
+    font-family: "Cocogoose Light";
+    src: url('../ressources/Cocogoose_Light.ttf');
+}
+
+@keyframes enter-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+div#projectList{
+    padding-top: 100px;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+div#projectBox {
+    margin: 20px;
+    height: 250px;
+    width: 540px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 5px 5px;
+    display: inline-flex;
+    animation: enter-in 500ms ease-in-out forwards;
+}
+
+div#projectLeft {
+    height: 230px;
+    width: 340px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+a#projectTitle {
+    font-size: 40px;
+    margin-left: 10px;
+    font-family: "Cocogoose Bold";
+    text-decoration: none;
+    display: block;
+    background: linear-gradient(15deg, rgb(24, 232, 217) 0%, rgb(94, 122, 233) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(15deg, rgb(24, 232, 217) 0%, rgb(94, 122, 233) 50%);
+}
+
+p#projectDesc {
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: "Cocogoose Light";
+    display: block;
+    background: linear-gradient(15deg, rgb(12, 116, 109) 0%, rgb(47, 61, 116) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div#projectRight {
+    height: 230px;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-flex;
+}
+
+div#projectRight {
+    height: 230px;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-flex;
+}
+
+img#projectPic {
+    width: 190px;
+    height: 190px;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
