@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Cocogoose Bold";
+    src: url('../../ressources/Cocogoose_Pro.ttf');
+}
+
+@font-face {
+    font-family: "Cocogoose Light";
+    src: url('../../ressources/Cocogoose_Light.ttf');
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translate(10%, -14%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0%, -14%);
+    }
+}
+
+div#headerOption {
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-left-color: white;
+    display: inline-flex;
+    margin-left: 20px;
+    width: 5px;
+    height: 28px;
+    transform: translateY(-18%);
+}
+
+h1#pageTitle {
+    margin-left: 20px;
+    font-family: "Cocogoose Bold";
+    font-size: 35px;
+    color: white;
+    display: inline-flex;
+    transform: translate(0%, -14%);
+    animation: fade-in 400ms ease-in-out forwards;
+}

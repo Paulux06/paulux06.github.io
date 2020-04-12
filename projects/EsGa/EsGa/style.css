@@ -1,0 +1,30 @@
+@keyframes elementsAnim {
+    0% {
+        filter: opacity(0);
+    }
+    100% {
+        filter: opacity(1);
+    }
+}
+
+@font-face {
+    font-family: "8bit";
+    src: url('./ressources/font.TTF');
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    background: linear-gradient(#006dff, #002d50);
+    background-size: 100vw 100vh;
+    animation-fill-mode: forwards;
+}
+canvas#screen {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    position: fixed;
+    image-rendering: pixelated;
+    cursor: none;
+}
