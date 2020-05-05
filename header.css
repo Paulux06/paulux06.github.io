@@ -53,13 +53,14 @@ div#icon {
 }
 
 img#icon {
-    margin: 4px;
+    margin-top: 12px;
     width: 160px;
     height: 48px;
 }
 
 div#menu {
-    margin-left: 20px;
+    margin-top: 4px;
+    padding-left: 2vw;
     height: 56px;
     display: inline-block;
     transform: translateY(0%);
@@ -68,8 +69,8 @@ div#menu {
 div#menuOption {
     display: inline-block;
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 0px;
     padding-left: 10px;
     padding-right: 10px;
     height: 24px;
@@ -83,7 +84,7 @@ a#menuOption {
     padding-left: 4px;
     padding-right: 4px;
     font-family: "Lemon";
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     background: linear-gradient(0deg, rgb(24, 232, 217) 0%, rgb(94, 122, 233) 100%);
     -webkit-background-clip: text;
