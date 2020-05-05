@@ -1,48 +1,86 @@
-@font-face {
-    font-family: "Cocogoose Bold";
-    src: url("./ressources/Cocogoose_Pro.ttf");
-}
-
-@font-face {
-    font-family: "Cocogoose Light";
-    src: url("./ressources/Cocogoose_Light.ttf");
-}
-
-@keyframes fade-in {
+@keyframes slide-in {
     0% {
-        opacity: 0;
-        transform: translateY(10%);
+        filter: opacity(0);
     }
     100% {
-        transform: translate(0%);
+        filter: opacity(1);
+    }
+}
+@keyframes slide-in-late {
+    0% {
+        transform: translateY(50%);
+        filter: opacity(0);
+    }
+    40% {
+        transform: translateY(50%);
+        filter: opacity(0);
+    }
+    70% {
+        transform: translateY(-10%);
+        filter: opacity(0.9);
+    }
+    85% {
+        transform: translateY(4%);
+        filter: opacity(0.95);
+    }
+    100% {
+        transform: translateY(0%);
+        filter: opacity(1);
     }
 }
 
-div#page {
-    padding: 80px;
+div#content {
+    padding-top: 60px;
 }
 
-h1#pageTitle {
-    text-align: center;
-    font-family: "Cocogoose Bold";
-    font-size: 40px;
-    background: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 10px;
-    border-image-source: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
-    border-image-slice: 1;
-    animation: fade-in 200ms ease-in-out;
+p#text {
+    color: white;
+    height: 100px;
 }
 
-h2#info {
-    text-align: center;
-    font-family: "Cocogoose Bold";
-    font-size: 20px;
-    background: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fade-in 400ms ease-in-out;
+div#promo {
+    width: 100vw;
+    height: 39vw;
+    animation: slide-in 600ms ease-in-out forwards;
+}
+
+div#button {
+    cursor: pointer;
+    width: 150px;
+    height: 44px;
+    background-color: rgba(87, 158, 240, 0.5);
+    border-radius: 16px;
+    animation: slide-in-late 1000ms ease-in-out forwards;
+    display: inline-block;
+    margin-top: 30vw;
+    border: solid;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 2px;
+    transition: border-color 300ms ease-in-out;
+}
+
+div#button:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+img#button {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-top: 4px;
+    transform: translateX(20%);
+}
+
+p#button {
+    transform: translateY(-50%);
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'cocogoose_bold';
+    color: white;
+}
+
+div#space {
+    height: 500px;
+    width: 99vw;
+    color: white;
 }

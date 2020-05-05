@@ -1,3 +1,3 @@
-function home() {
-    window.location.href = "../index.html";
+function setup() {
+    header(1);
 }
