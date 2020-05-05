@@ -19,10 +19,10 @@ function setup() {
     icon.id = 'button';
 
     button.appendChild(text); button.appendChild(icon);
-    promo.appendChild(button);
     document.getElementById('content').appendChild(promo);
+    setTimeout(() => {promo.appendChild(button);}, 500);
 
-    button.onclick = function() {window.location.href = './plx/index.html'};
+    button.onclick = function() {window.location.href = './projects/plx/index.html'};
 
     var space = document.createElement('div');
     space.id = 'space';

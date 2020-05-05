@@ -1,0 +1,55 @@
+div#project {
+    margin: 2vw;
+    width: 45vw;
+    height: 20vw;
+    background-color: rgb(40, 40, 40);
+    border: solid;
+    border-color: rgb(140, 140, 140);
+    border-width: 2px;
+    border-radius: 2vw;
+    display: inline-flex;
+    cursor: pointer;
+    filter: opacity(0);
+    transition: filter 300ms ease-in-out;
+}
+div#project:hover {
+    background-color: rgb(25, 37, 48);
+}
+
+div#project_left {
+    width: 14vw;
+    height: 14vw;
+    margin: 3vw 1.5vw;
+}
+img#project {
+    width: 14vw;
+    height: 14vw;
+    margin: 0px;
+}
+
+div#project_right {
+    width: 29vw;
+    height: 16vw;
+    padding: 2vw;
+    border-left: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(0deg, rgb(59, 232, 217) 0%, rgb(94, 122, 233) 100%);
+}
+p#description {
+    font-size: 16px;
+    font-family: 'comfortaa';
+    color: rgb(220, 220, 220);
+    border-top: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgb(59, 232, 217) 0%, rgb(94, 122, 233) 100%);
+    padding-top: 5px;*
+}
+p#title {
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    font-family: 'comfortaa';
+    background: linear-gradient(0deg, rgb(24, 232, 217) 0%, rgb(94, 122, 233) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

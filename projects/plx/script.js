@@ -1,3 +1,3 @@
 function setup() {
-    header(1);
+    header(2);
 }
