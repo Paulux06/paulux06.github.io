@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Cocogoose_bold";
+    src: url("./ressources/Cocogoose_Pro.ttf");
+}
+@font-face {
+    font-family: "Cocogoose_light";
+    src: url("./ressources/Cocogoose_Light.ttf");
+}
 /* width */
 ::-webkit-scrollbar {
     width: 0px;
@@ -24,6 +32,8 @@ body {
     padding-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
+    text-align: center;
+    align-content: center;
 }
 
 div#header {
@@ -32,6 +42,7 @@ div#header {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 5px;
     position: fixed;
     transform: translateY(-80px);
+    text-align: left;
 }
 
 div#home {
@@ -54,7 +65,7 @@ h2#button {
     margin: 30px 30px;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Cocogoose_light";
     font-size: 20px;
     padding: 0px;
     transform: translateY(-15px);

@@ -19,8 +19,8 @@ function header(level) {
     var buttons = [
         ['Acceuil', loadHome],
         ['Projets', loadProjects],
-        ['Réseaux', loadNetworks],
-        ['À propos', loadMore],
+        ['Reseaux', loadNetworks],
+        ['A propos', loadMore],
     ];
     var delay = 50;
 
