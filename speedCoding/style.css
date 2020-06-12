@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Cocogoose Bold";
+    src: url('../ressources/Cocogoose_Pro.ttf');
+}
+
+@font-face {
+    font-family: "Cocogoose Light";
+    src: url('../ressources/Cocogoose_Light.ttf');
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url('../ressources/Comfortaa.ttf');
+}
+
+@keyframes enter-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+div#projectList{
+    padding-top: 100px;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+div#projectBox {
+    margin: 1vw;
+    height: 18vw;
+    width: 42vw;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 5px 5px;
+    display: inline-block;
+    animation: enter-in 500ms ease-in-out forwards;
+}
+
+div#projectTop {
+    height: 2.5vw;
+    width: 40vw;
+    margin: 1vw;
+    text-align: center;
+}
+
+a#projectTitle {
+    font-size: 2.2vw;
+    margin-left: 1vw;
+    font-family: "Comfortaa";
+    text-decoration: none;
+    display: block;
+    background: linear-gradient(15deg, rgb(24, 232, 217) 0%, rgb(94, 122, 233) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(15deg, rgb(24, 232, 217) 0%, rgb(94, 122, 233) 50%);
+}
+
+p#projectDesc {
+    margin-top: 1vw;
+    margin-left: 1vw;
+    font-size: 1.2vw;
+    font-family: "Comfortaa";
+    transform: translateY(100%);
+    background: linear-gradient(15deg, rgb(12, 116, 109) 0%, rgb(47, 61, 116) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div#projectBottom {
+    height: 10vw;
+    width: 40vw;
+    margin: 1vw;
+}
+
+img#projectPic {
+    width: 16vw;
+    height: 9vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}

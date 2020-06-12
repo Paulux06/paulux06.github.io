@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Lemon";
+    src: url('./ressources/Lemon-Regular.ttf');
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(40, 40, 40);
+}
+
+div#header {
+    z-index: 10;
+    background: linear-gradient(15deg, rgb(24, 232, 217) 0%, rgb(94, 122, 233) 100%);
+    height: 5vw;
+    width: 100vw;
+    position: fixed;
+    box-shadow: rgba(20, 90, 120, 0.3) 0px 0px 1vw 1vw;
+}
+
+img#headerHome {
+    height: 3vw;
+    margin-left: 0.5vw;
+    margin-top: 1vw;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0);
+    border-bottom-width: 0.3vw;
+    transition: border-color 200ms ease-in-out;
+}
+
+img#headerHome:hover {
+    border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+div#headerOption {
+    border-left-style: solid;
+    border-left-width: 0.3vw;
+    border-left-color: white;
+    display: inline-flex;
+    margin-left: 4vw;
+    transform: translateY(-45%);
+}
+
+a#headerOption {
+    margin-left: 4vw;
+    font-family: "Lemon";
+    font-size: 1.5vw;
+    color: white;
+    text-decoration: none;
+    border-bottom-width: 0.2vw;
+    border-bottom-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    transition: border-bottom-color 200ms ease-in-out;
+}
+
+a#headerOption:hover {
+    border-bottom-color: rgba(255, 255, 255, 1);
+}
