@@ -84,7 +84,7 @@ p#explorerFile
     cursor: pointer;
     text-align: left;
     font-family: "helvetica";
-    font-size: 2.3vh;
+    font-size: 1vw;
     transition: background-color 100ms ease-in-out;
 }
 
