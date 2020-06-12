@@ -24,9 +24,10 @@ window.onload = function()
 
     //explorer content
     for (let i = 0; i < explorerOptions.length; i++) {
+        const current = explorerOptions[i];
         explorer.appendChild(
             this.Object.create(this.explorerFile).init(
-                explorerOptions[i].title, explorerOptions[i].func, this.DARKGRAY_LIGHT, i, selectEOption
+                current.title, current.func, this.DARKGRAY_LIGHT, i, selectEOption, current.level
             )
         );
     }

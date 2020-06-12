@@ -1,6 +1,6 @@
 var explorerOptions = [
-    { title: 'index.html', func: displayIndex},
-    { title: 'TI.html', func: displayTI}
+    { title: 'index.html', func: displayIndex, level: 0},
+    { title: 'TI.html', func: displayTI, level: 1}
 ];
 
 function selectEOption(index)

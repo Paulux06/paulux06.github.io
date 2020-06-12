@@ -1,7 +1,14 @@
+@font-face
+{
+    font-family: "custom";
+    src: url("../font.otf");
+}
+
 body
 {
     margin: 0px;
     padding: 0px;
+    text-align: center;
 }
 
 div#titleDIV
@@ -12,14 +19,36 @@ div#titleDIV
     text-align: center;
     border: solid;
     border-width: 1vh;
-    border-color: white;
+    border-image-source: linear-gradient(35deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%);
+    border-image-slice: 1;
     border-radius: 2vh;
 }
 
 h1#title
 {
-    font-size: 7vh;
-    transform: translateY(-40%);
-    font-family: "helvetica";
-    color: white;
+    font-size: 8vh;
+    transform: translateY(-50%);
+    font-family: "custom";
+    background: linear-gradient(35deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2
+{
+    font-size: 4vh;
+    transform: translateY(-70%);
+    font-family: "custom";
+    background: linear-gradient(35deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p
+{
+    font-size: 3vh;
+    font-family: "custom";
+    background: linear-gradient(35deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
