@@ -24,13 +24,15 @@ div#topbar
 div#explorer
 {
     margin-top: 5vh;
-    width: 16vw;
-    height: 91.5vh;
-    border: solid;
+    width: 17vw;
+    height: 93vh;
+    border-left: solid;
+    border-bottom: solid;
+    padding-top: 1vw;
     border-width: 1vw;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 5px;
     position: fixed;
-    display: inline-flex;
+    align-content: center;
     z-index: 2;
 }
 
@@ -38,6 +40,7 @@ div#page
 {
     margin-top: 5vh;
     margin-left: 18vw;
+    padding: 1vw;
     width: 82vw;
     height: 95vh;
     position: fixed;
@@ -47,21 +50,50 @@ div#page
 
 div#page-content
 {
-    margin: 0px;
-    padding: 0px;
+    width: 78vw;
+    min-height: 93vh;
+    padding: 1vw;
     z-index: 1;
-
+    position: relative;
 }
 
 p#topbarOption
 {
-    height: 2.5vh;
+    height: 3.3vh;
     display: inline-flex;
-    margin-left: 2vw;
-    margin-top: 0px;
+    margin-left: 1vw;
+    margin-top: 0vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
     padding-top: 1.5vh;
     cursor: pointer;
     font-family: "helvetica";
     font-size: 2.2vh;
-    transition: background-color 200ms ease-in-out;
+    transition: background-color 100ms ease-in-out;
+}
+
+p#explorerFile
+{
+    width: 15.5vw;
+    height: 2.8vh;
+    margin: 0px;
+    position: relative;
+    padding-left: 1vw;
+    padding-right: 0.5vw;
+    padding-top: 0.6vh;
+    cursor: pointer;
+    text-align: left;
+    font-family: "helvetica";
+    font-size: 2.3vh;
+    transition: background-color 100ms ease-in-out;
+}
+
+div#selector
+{
+    width: 17vw;
+    height: 3.4vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    transform: translateY(0vh);
+    transition: transform 100ms ease-in-out;
 }
