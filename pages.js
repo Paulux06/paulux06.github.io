@@ -18,19 +18,19 @@ function clear() {
 }
 
 function displayTI() {
-    clear();
-    var main = document.getElementById('page-content');
-    var content = document.createElement('iframe')
-    content.src = "./TI/files/index.html"
-    content.id = "page-content"
-    main.appendChild(content);
+    display("./TI/files/index.html");
 }
 
 function displayIndex() {
+    display("./main/main.html");
+}
+
+function display(path)
+{
     clear();
     var main = document.getElementById('page-content');
-    var content = document.createElement('iframe')
-    content.src = "./main.html"
-    content.id = "page-content"
+    var content = document.createElement('iframe');
+    content.src = path;
+    content.id = "page-content";
     main.appendChild(content);
 }

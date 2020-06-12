@@ -50,9 +50,8 @@ div#page
 
 div#page-content
 {
-    width: 78vw;
+    width: 80vw;
     min-height: 93vh;
-    padding: 1vw;
     z-index: 1;
     position: relative;
 }
@@ -70,6 +69,8 @@ p#topbarOption
     font-family: "helvetica";
     font-size: 2.2vh;
     transition: background-color 100ms ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 p#explorerFile
@@ -86,6 +87,8 @@ p#explorerFile
     font-family: "helvetica";
     font-size: 1vw;
     transition: background-color 100ms ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 div#selector
@@ -100,8 +103,8 @@ div#selector
 
 iframe#page-content
 {
-    width: 76vw;
-    min-height: 91vh;
+    width: 80vw;
+    min-height: 92vh;
     z-index: 1;
     position: relative;
     margin: 0px;

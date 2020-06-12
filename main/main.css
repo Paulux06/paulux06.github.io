@@ -1,0 +1,25 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+div#titleDIV
+{
+    width: 40vw;
+    height: 60px;
+    margin-left: 30vw;
+    text-align: center;
+    border: solid;
+    border-width: 1vh;
+    border-color: white;
+    border-radius: 2vh;
+}
+
+h1#title
+{
+    font-size: 7vh;
+    transform: translateY(-40%);
+    font-family: "helvetica";
+    color: white;
+}
