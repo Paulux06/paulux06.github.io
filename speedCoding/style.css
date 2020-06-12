@@ -31,9 +31,9 @@ div#projectList{
 }
 
 div#projectBox {
-    margin: 20px;
-    height: 250px;
-    width: 540px;
+    margin: 1vw;
+    height: 18vw;
+    width: 42vw;
     background-color: rgb(255, 255, 255);
     border-style: solid;
     border-color: rgb(255, 255, 255);
@@ -45,15 +45,15 @@ div#projectBox {
 }
 
 div#projectTop {
-    height: 60px;
-    width: 520px;
-    margin: 10px;
+    height: 2.5vw;
+    width: 40vw;
+    margin: 1vw;
     text-align: center;
 }
 
 a#projectTitle {
-    font-size: 40px;
-    margin-left: 10px;
+    font-size: 2.2vw;
+    margin-left: 1vw;
     font-family: "Comfortaa";
     text-decoration: none;
     display: block;
@@ -67,10 +67,10 @@ a#projectTitle {
 }
 
 p#projectDesc {
-    margin-left: 10px;
-    font-size: 18px;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    font-size: 1.2vw;
     font-family: "Comfortaa";
-    display: block;
     transform: translateY(100%);
     background: linear-gradient(15deg, rgb(12, 116, 109) 0%, rgb(47, 61, 116) 50%);
     -webkit-background-clip: text;
@@ -78,16 +78,14 @@ p#projectDesc {
 }
 
 div#projectBottom {
-    height: 190px;
-    width: 520px;
-    margin: 10px;
+    height: 10vw;
+    width: 40vw;
+    margin: 1vw;
 }
 
 img#projectPic {
-    width: 190px;
-    height: 100px;
-    margin-left: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
+    width: 16vw;
+    height: 9vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
 }
