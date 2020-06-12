@@ -16,7 +16,7 @@ div#topbar
 {
     width: 100vw;
     height: 5vh;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
     position: fixed;
     z-index: 3;
 }
@@ -30,7 +30,7 @@ div#explorer
     border-bottom: solid;
     padding-top: 1vw;
     border-width: 1vw;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
     position: fixed;
     align-content: center;
     z-index: 2;
@@ -96,4 +96,15 @@ div#selector
     position: fixed;
     transform: translateY(0vh);
     transition: transform 100ms ease-in-out;
+}
+
+iframe#page-content
+{
+    width: 76vw;
+    min-height: 91vh;
+    z-index: 1;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    border: none;
 }

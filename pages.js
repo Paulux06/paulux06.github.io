@@ -17,20 +17,20 @@ function clear() {
     pg.appendChild(npgct);
 }
 
-function displayIndex() {
-    clear();
-    var main = document.getElementById('page-content');
-    var content = document.createElement('p')
-    content.innerHTML = "page Index";
-    content.style.color = "#FFF";
-    main.appendChild(content);
-}
-
 function displayTI() {
     clear();
     var main = document.getElementById('page-content');
-    var content = document.createElement('p')
-    content.innerHTML = "page TI";
-    content.style.color = "#FFF";
+    var content = document.createElement('iframe')
+    content.src = "./TI/files/index.html"
+    content.id = "page-content"
+    main.appendChild(content);
+}
+
+function displayIndex() {
+    clear();
+    var main = document.getElementById('page-content');
+    var content = document.createElement('iframe')
+    content.src = "./main.html"
+    content.id = "page-content"
     main.appendChild(content);
 }
