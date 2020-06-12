@@ -1,48 +1,64 @@
 @font-face {
-    font-family: "Cocogoose Bold";
+    font-family: "Cocogoose_bold";
     src: url("./ressources/Cocogoose_Pro.ttf");
 }
-
 @font-face {
-    font-family: "Cocogoose Light";
+    font-family: "Cocogoose_light";
     src: url("./ressources/Cocogoose_Light.ttf");
 }
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: translateY(10%);
-    }
-    100% {
-        transform: translate(0%);
-    }
+@font-face {
+    font-family: "Comfortaa";
+    src: url("./ressources/Comfortaa.ttf");
 }
 
-div#page {
-    padding: 80px;
+h2#panneau {
+    padding-top: 1vw;
+    font-size: 2vw;
+    font-family: "Cocogoose_bold";
 }
 
-h1#pageTitle {
+h3#tuile {
+    font-size: 1.3vw;
+    font-family: "Cocogoose_light";
+}
+
+p#tuile {
+    font-size: 1vw;
+    font-family: "Comfortaa";
+}
+
+div#panneau {
+    width: 52vw;
+    height: 20vw;
+    margin: 0px;
+    padding: 0px;
     text-align: center;
-    font-family: "Cocogoose Bold";
-    font-size: 40px;
-    background: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 10px;
-    border-image-source: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
-    border-image-slice: 1;
-    animation: fade-in 200ms ease-in-out;
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 5px;
 }
 
-h2#info {
-    text-align: center;
-    font-family: "Cocogoose Bold";
-    font-size: 20px;
-    background: linear-gradient(15deg, rgb(24, 232, 217) 20%, rgb(94, 122, 233) 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fade-in 400ms ease-in-out;
+div#tuile {
+    width: 20vw;
+    height: 12vw;
+    margin: 1vw 3vw;
+    padding: 0px;
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 5px;
+}
+
+div#titleDIV {
+    width: 50vw;
+    height: 4vw;
+    display: block;
+    margin: 1vw;
+    padding: 0px;
+}
+
+div#contentDIV {
+    width: 58vw;
+    height: 14vw;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    display: inline-flex;
 }
