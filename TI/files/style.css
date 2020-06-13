@@ -12,9 +12,9 @@ body
 
 div#title
 {
-    width: 40vw;
-    height: 60px;
-    margin-left: 30vw;
+    width: 42vw;
+    height: 10vh;
+    margin-left: 29vw;
     text-align: center;
     border: solid;
     border-width: 1vh;

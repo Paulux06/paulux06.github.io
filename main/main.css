@@ -14,7 +14,7 @@ body
 div#titleDIV
 {
     width: 40vw;
-    height: 60px;
+    height: 10vh;
     margin-left: 30vw;
     text-align: center;
     border: solid;
@@ -26,7 +26,7 @@ div#titleDIV
 
 h1#title
 {
-    font-size: 8vh;
+    font-size: 7vh;
     transform: translateY(-50%);
     font-family: "custom";
     background: linear-gradient(35deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%);
