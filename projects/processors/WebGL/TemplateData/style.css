@@ -16,3 +16,32 @@
 .webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
 .webgl-content .footer .title {margin-right: 10px; float: right;}
 .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+
+@font-face
+{
+    font-family: "custom";
+    src: url("../../../../font.otf");
+}
+
+h2#fullscreen
+{
+    margin-left: 40vw;
+    width: 16vw;
+    text-align: center;
+    user-select: none;
+    -moz-user-select: none;
+    font-size: 5vh;
+    font-family: "custom";
+    transform: translateY(-40%);
+    border: solid;
+    border-width: 0.8vh;
+    border-radius: 2vh;
+    color: black;
+    background-image: linear-gradient(35deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%);
+    transition: transform 200ms ease-in-out;
+}
+
+h2#fullscreen:hover
+{
+    transform: translateY(-60%);
+}
