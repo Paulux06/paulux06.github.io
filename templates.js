@@ -16,6 +16,11 @@ var explorerFile = {
         explorerOp.innerHTML = title;
         explorerOp.id = "explorerFile";
         explorerOp.style.color = color;
+        level++;
+        explorerOp.style.paddingLeft = level.toString()+"vw";
+        level--;
+        level = 15.5 - level;
+        explorerOp.style.width = level.toString()+"vw";
         explorerOp.onmousedown = function () { func(); selectionFunc(index); };
         return explorerOp;
     }

@@ -1,6 +1,10 @@
 var explorerOptions = [
-    { title: 'index.html', func: displayIndex, level: 0},
-    { title: 'TI.html', func: displayTI, level: 1}
+    { title: 'Index.html', func: function(){display("./main/main.html");}, level: 0},
+    { title: 'TI.html', func: function(){display("./TI/index.html");}, level: 1},
+    { title: 'Apps.html', func: function(){display("./TI/apps/index.html");}, level: 2},
+    { title: 'Files.html', func: function(){display("./TI/files/index.html");}, level: 2},
+    { title: 'Projets.html', func: function(){display("./projects/index.html");}, level: 1},
+    { title: 'Processors.html', func: function(){display("./projects/processors/index.html");}, level: 2}
 ];
 
 function selectEOption(index)
@@ -15,14 +19,6 @@ function clear() {
     npgct.id = "page-content";
     pg.removeChild(pgct);
     pg.appendChild(npgct);
-}
-
-function displayTI() {
-    display("./TI/files/index.html");
-}
-
-function displayIndex() {
-    display("./main/main.html");
 }
 
 function display(path)
