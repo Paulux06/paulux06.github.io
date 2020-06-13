@@ -32,5 +32,5 @@ window.onload = function()
         );
     }
 
-    displayIndex();
+    display('./main/main.html');
 }
