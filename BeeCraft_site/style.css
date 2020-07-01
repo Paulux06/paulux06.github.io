@@ -1,0 +1,227 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/********************************************************
+ *                       COLORS                         *
+ * http://paletton.com/#uid=11j0u0kyQuCgqVCoNGZzhkCHzbj *
+ ********************************************************/
+:root
+{
+    --color-main: #ffd130;
+    --color-main-light: #fddf90;
+    --color-main-lighter: #f4e7c3;
+    --color-main-dark: #5d4935;
+    --color-main-darker: #5d4935;
+}
+
+/********************************
+ *            FONTS             *
+ ********************************/
+@font-face
+{
+    font-family: "BeeCraft";
+    src: url("./ressources/DenkOne-Regular.ttf");
+}
+@font-face
+{
+    font-family: "Perso";
+    src: url("./ressources/PoetsenOne-Regular.ttf");
+}
+
+
+/********************************
+ *          ANIMATIONS          *
+ ********************************/
+
+@keyframes wave
+{
+    0% {transform: translateY(-5%);}
+    50% {transform: translateY(0%);}
+    100% {transform: translateY(-5%);}
+}
+
+/********************************
+ *           ELEMENTS           *
+ ********************************/
+
+p#welcome-banner
+{
+    background-color: var(--color-main-dark);
+    color: var(--color-main-light);
+    font-family: "Perso";
+    font-size: 25px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+div#title-image
+{
+    width: 100vw;
+    height: 25vw;
+    background-image: url("./ressources/background_blur.png");
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+img#title-icon
+{
+    margin: 11.5vw 0px;
+    width: 6vw;
+    height: 6vw;
+    animation: wave 3s ease-in-out infinite;
+}
+
+h1#title
+{
+    user-select: none;
+    margin: 10.5vw 0px;
+    font-family: "BeeCraft";
+    font-size: 6vw;
+    color: var(--color-main);
+    text-shadow: 4px 0 0 #320, -4px 0 0 #320, 0 4px 0 #320, 0 -4px 0 #320, 2px 2px #320, -2px -2px 0 #320, 2px -2px 0 #320, -2px 2px 0 #320;
+    transform: translateY(-5%);
+    animation: wave 3s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+div#header-spacer
+{
+    height: 80px;
+    width: 80vw;
+    display: none;
+    background-color: black;
+}
+
+div#header {
+    background-color: var(--color-main-darker);
+    position: initial;
+    top: 0;
+    width: 100vw;
+    height: 80px;
+    z-index: 1;
+    display: inline-flex;
+}
+div#header-content
+{
+    display: inline-flex;
+    background-color: var(--color-main-darker);
+    z-index: 1;
+}
+
+@media (max-width:1279px) { 
+    div#header-options {
+        display: block;
+        width: 270px;
+        height: 300px;
+        overflow: hidden;
+        transition: height 200ms ease-in-out;
+        background-color: #000;
+    }
+}
+@media (min-width:1280px) { 
+    div#header-options {
+        display: inline-flex;
+        width: 90vw;
+        overflow: visible;
+    }
+}
+
+img#header-icon
+{
+    margin: 11.5vw 0px;
+    width: 60px;
+    height: 60px;
+    margin: 13px 5px;
+}
+
+h1#header-title
+{
+    user-select: none;
+    margin: 25px 5px;
+    margin-right: 50px;
+    font-family: "BeeCraft";
+    font-size: 30px;
+    color: var(--color-main);
+    text-shadow: 4px 0 0 #320, -4px 0 0 #320, 0 4px 0 #320, 0 -4px 0 #320, 2px 2px #320, -2px -2px 0 #320, 2px -2px 0 #320, -2px 2px 0 #320;
+}
+
+h2#header-option
+{
+    margin-left: 60px;
+    margin-top: 28px;
+    padding: 0px 0px;
+    font-family: "Perso";
+    color: var(--color-main);
+    text-shadow: 2px 0 0 #320, -2px 0 0 #320, 0 2px 0 #320, 0 -2px 0 #320, 1px 1px #320, -1px -1px 0 #320, 1px -1px 0 #320, -1px 1px 0 #320;
+    cursor: pointer;
+    border-bottom: solid;
+    border-width: 4px;
+    border-color: rgba(0, 0, 0, 0);
+    transition: border-color 200ms ease-in-out;
+    user-select: none;
+}
+h2#header-option:hover
+{
+    border-color: var(--color-main);
+}
+
+div#content
+{
+    text-align: center;
+    background-color: var(--color-main-lighter);
+}
+
+div#dialog
+{
+    background-color: var(--color-main-light);
+    border-radius: 20px;
+    min-width: 50vw;
+    min-height: 50vh;
+    max-width: 80vw;
+    padding: 12px;
+    margin: 20px 20px;
+    padding-right: 40px;
+    display: inline-block;
+}
+
+h3#dialog-title
+{
+    font-family: "Perso";
+    font-size: 30px;
+    color: var(--color-main);
+    text-shadow: 2px 0 0 #320, -2px 0 0 #320, 0 2px 0 #320, 0 -2px 0 #320, 1px 1px #320, -1px -1px 0 #320, 1px -1px 0 #320, -1px 1px 0 #320;
+}
+
+p#dialog-text
+{
+    font-family: "Perso";
+    font-size: 20px;
+    color: var(--color-main-darker);
+}
