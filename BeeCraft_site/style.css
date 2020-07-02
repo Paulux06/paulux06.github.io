@@ -126,6 +126,7 @@ div#content
     background-image: url("./ressources/background_blur.png");
     background-size: cover;
     height: fit-content;
+    min-height: inherit;
     width: 100vw;
     display: flexbox;
     align-items: center;
@@ -136,15 +137,13 @@ div#content
 
 div#footer
 {
-    margin-top: 40px;
-    margin-left: 43vw;
+    margin-top: 80px;
     background: var(--gradient);
-    width: 14vw;
+    width: fit-content;
     height: fit-content;
-    padding: 10px;
+    padding: 2px 5px;
     border-radius: 10px;
-    display: table;
-
+    display: inline-block;
 }
 
 p#footer
@@ -152,5 +151,7 @@ p#footer
     font-family: "Perso";
     font-size: 12px;
     color: var(--color-main-darker);
-    display: table-row;
+    display: block;
+    padding: 0px;
+    margin: 2px;
 }

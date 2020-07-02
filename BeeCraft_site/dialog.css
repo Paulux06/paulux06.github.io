@@ -3,7 +3,6 @@ div#dialog
     background: var(--gradient);
     border-radius: 20px;
     width: 70vw;
-    min-height: 40vh;
     padding: 12px;
     margin-top: 50px;
     margin-left: 14vw;
@@ -47,7 +46,7 @@ div#dialog-answer
 h3#dialog-title
 {
     font-family: "Perso";
-    font-size: 1.8vw;
+    font-size: 30px;
     background: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -61,7 +60,7 @@ h3#dialog-title
 p#dialog-text
 {
     font-family: "Perso";
-    font-size: 1.1vw;
+    font-size: 16px;
     color: var(--color-main-darker);
     user-select: none;
     -moz-user-select: none;
