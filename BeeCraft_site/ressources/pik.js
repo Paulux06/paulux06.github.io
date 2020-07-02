@@ -1,0 +1,1 @@
+var f="AIzaSyC8tm1Sthyg";function a(){return g()+y()+u()};function u(){return "_RAObbz_O7ffc"};function y(){return "Pplg8lMrnxlxd"};function g(){return f.substring(0,f.length-3)};function h(){return "beecraft-mc"}
