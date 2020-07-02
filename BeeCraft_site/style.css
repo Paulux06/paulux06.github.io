@@ -42,6 +42,7 @@ body
     --gradient: linear-gradient(90deg, rgba(241,231,17,1) 0%, rgba(255,179,0,1) 100%);
     --gradient_dark: linear-gradient(90deg, rgba(149,141,0,1) 0vw, rgba(149,105,0,1) 100vw);
     --shadows: rgba(0, 0, 0, 0.4);
+    --transition-type: cubic-bezier(0.80, 0, 0.20, 1);
 }
 
 /********************************
@@ -96,6 +97,7 @@ div#title-image
     align-items: center;
     justify-content: center;
     display: flex;
+    transition: height 0.5s var(--transition-type);
 }
 
 img#title-icon
@@ -103,15 +105,16 @@ img#title-icon
     margin: 11.5vw 0px;
     width: 6vw;
     height: 6vw;
-    animation: wave 3s ease-in-out infinite;
     filter: drop-shadow(0px 0px 5px #000);
+    animation: wave 3s ease-in-out infinite;
 }
 
-h1#title
+h1#title-text
 {
     user-select: none;
     margin: 10.5vw 0px;
     font-family: "BeeCraft";
+    opacity: 1;
     font-size: 6vw;
     background: var(--gradient);
     filter: drop-shadow(0px 0px 5px #000);
@@ -121,21 +124,29 @@ h1#title
     transform: translateY(-5%);
     animation: wave 3s ease-in-out infinite;
     animation-delay: 0.4s;
+    transition: opacity 0.25s var(--transition-type);
+}
+
+div#cont-back
+{
+    background-image: url("./ressources/background_blur.png");
+    background-size: cover;
+    height: fit-content;
+    min-height: inherit;
+    width: 100vw;
 }
 
 div#content
 {
     text-align: center;
-    background-image: url("./ressources/background_blur.png");
-    background-size: cover;
-    height: fit-content;
-    bottom: 0px;
+    min-height: 75vh;
     width: 100vw;
     display: flexbox;
     align-items: center;
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    transition: opacity 0.25s var(--transition-type);
 }
 
 div#footer

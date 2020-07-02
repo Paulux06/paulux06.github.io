@@ -22,30 +22,33 @@ window.addEventListener("scroll", function(event) {
 
 window.onload = function()
 {
+    document.getElementById("header-options").style.height = "80px";
+}
+    
+function toogleMenu()
+{
     var options = document.getElementById("header-options");
-    options.style.height = "80px";
-
-    var toogleOptions = document.getElementById("header-toogle");
-    toogleOptions.onclick = function(ev)
+    if (document.documentElement.clientWidth < 1280)
     {
-        if (document.documentElement.clientWidth < 1280)
-        {
-            if (options.style.height == "80px")
-                options.style.height = "340px";
-            else
-                options.style.height = "80px";
-        }
-        //console.log(options.style.height.substring(0, options.style.height.length-2));
+        var high = options.childNodes.length * 20 + 80;
+        if (options.style.height == "80px")
+            options.style.height = high.toString()+"px";
+        else
+            options.style.height = "80px";
     }
+    console.log(options.style.height.substring(0, options.style.height.length-2));
+}
+function closeMenu()
+{
+    var options = document.getElementById("header-options").style.height = "80px";
+}
 
-    var ipAdress = document.getElementById("ip-value");
-    ipAdress.onclick = function(ev)
-    {
-        var txtar = document.createElement("textarea");
-        txtar.value = ipAdress.innerHTML;
-        document.body.appendChild(txtar);
-        txtar.select();
-        document.execCommand("copy");
-        document.body.removeChild(txtar);
-    }
+function copyIP()
+{
+    var txtar = document.createElement("textarea");
+    txtar.value = ipAdress.innerHTML;
+    document.body.appendChild(txtar);
+    txtar.select();
+    document.execCommand("copy");
+    document.body.removeChild(txtar);
 }
