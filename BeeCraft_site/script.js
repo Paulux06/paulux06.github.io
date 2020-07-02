@@ -23,14 +23,17 @@ window.addEventListener("scroll", function(event) {
 window.onload = function()
 {
     var options = document.getElementById("header-options");
-    options.onclick = function(ev)
+    options.style.height = "80px";
+    var toogleOptions = document.getElementById("header-toogle");
+    toogleOptions.onclick = function(ev)
     {
-        if (options.style.overflow = "hidden")
+        if (document.documentElement.clientWidth < 1280)
         {
             if (options.style.height == "80px")
-                options.style.height = "260px";
+                options.style.height = "340px";
             else
                 options.style.height = "80px";
         }
+        //console.log(options.style.height.substring(0, options.style.height.length-2));
     }
 }

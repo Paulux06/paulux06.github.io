@@ -11,7 +11,6 @@ div#header {
     position: relative;
     top: 0;
     width: 100vw;
-    overflow: hidden;
     height: 80px;
     z-index: 1;
     display: inline-flex;
@@ -28,11 +27,19 @@ div#header-content
     div#header-options
     {
         display: block;
-        width: 270px;
-        height: 260px;
+        width: fit-content;
+        height: 80px;
+        width: fit-content;
+        padding-right: 40px;
         overflow: hidden;
-        background: var(--gradient);
+        background: linear-gradient(90deg, #f4dd0e 0%, #f7d40b 100%);
         transition: height 200ms ease-in-out;
+    }
+    img#header-toogle
+    {
+        margin-top: 12px;
+        height: 60px;
+        cursor: pointer;
     }
 }
 @media (min-width:1280px)
@@ -40,8 +47,14 @@ div#header-content
     div#header-options
     {
         display: inline-flex;
-        width: 80vw;
+        width: fit-content;
         overflow: visible;
+    }
+    img#header-toogle
+    {
+        height: 80px;
+        cursor: pointer;
+        display: none;
     }
 }
 
@@ -71,7 +84,7 @@ h1#header-title
 
 h2#header-button
 {
-    margin-left: 60px;
+    margin-left: 40px;
     margin-top: 28px;
     padding: 0px 0px;
     font-family: "Perso";

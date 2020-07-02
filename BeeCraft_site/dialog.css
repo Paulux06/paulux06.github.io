@@ -54,6 +54,8 @@ h3#dialog-title
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0px 0px 2px #000);
     animation: wave 2s ease-in-out infinite;
+    user-select: none;
+    -moz-user-select: none;
 }
 
 p#dialog-text
@@ -64,4 +66,6 @@ p#dialog-text
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    user-select: none;
+    -moz-user-select: none;
 }
