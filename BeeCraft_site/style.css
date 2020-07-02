@@ -129,7 +129,7 @@ div#content
     background-image: url("./ressources/background_blur.png");
     background-size: cover;
     height: fit-content;
-    min-height: inherit;
+    bottom: 0px;
     width: 100vw;
     display: flexbox;
     align-items: center;
@@ -147,6 +147,7 @@ div#footer
     padding: 2px 5px;
     border-radius: 10px;
     display: inline-block;
+    box-shadow: 0px 0px 10px var(--shadows);
 }
 
 p#footer

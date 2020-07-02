@@ -30,9 +30,8 @@ div#header-content
         display: block;
         width: fit-content;
         height: 80px;
-        width: fit-content;
-        padding-right: 40px;
         overflow: hidden;
+        padding-right: 120px;
         background: var(--gradient);
         background-attachment: fixed;
         transition: height 200ms ease-in-out;
@@ -139,6 +138,7 @@ p#ip-adress
 
 p#ip-value
 {
+    margin-left: 5px;
     font-family: "Perso";
     font-size: 20px;
     color: var(--color-blue);
