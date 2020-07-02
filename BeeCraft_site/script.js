@@ -28,7 +28,7 @@ window.onload = function()
         if (options.style.overflow = "hidden")
         {
             if (options.style.height == "80px")
-                options.style.height = "300px";
+                options.style.height = "260px";
             else
                 options.style.height = "80px";
         }

@@ -1,0 +1,93 @@
+div#header-spacer
+{
+    height: 80px;
+    width: 80vw;
+    display: none;
+    background-color: black;
+}
+
+div#header {
+    background: var(--gradient);
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 80px;
+    z-index: 1;
+    display: inline-flex;
+    box-shadow: 0px 0px 10px var(--shadows);
+}
+div#header-content
+{
+    display: inline-flex;
+    z-index: 1;
+}
+
+@media (max-width:1279px)
+{ 
+    div#header-options
+    {
+        display: block;
+        width: 270px;
+        height: 260px;
+        overflow: hidden;
+        background: var(--gradient);
+        transition: height 200ms ease-in-out;
+    }
+}
+@media (min-width:1280px)
+{ 
+    div#header-options
+    {
+        display: inline-flex;
+        width: 90vw;
+        overflow: visible;
+    }
+}
+
+img#header-icon
+{
+    margin: 11.5vw 0px;
+    width: 60px;
+    height: 60px;
+    margin: 13px 5px;
+}
+
+h1#header-title
+{
+    user-select: none;
+    margin: 25px 5px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    height: 35px;
+    font-family: "BeeCraft";
+    font-size: 30px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 2px #000);
+}
+
+h2#header-option
+{
+    margin-left: 60px;
+    margin-top: 28px;
+    padding: 0px 0px;
+    font-family: "Perso";
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 2px #000);
+    cursor: pointer;
+    border-bottom: solid;
+    border-width: 0px;
+    border-image: var(--gradient);
+    border-image-slice: 1;
+    transition: border-width 70ms ease-in-out;
+    user-select: none;
+}
+h2#header-option:hover
+{
+    border-width: 4px;
+}
