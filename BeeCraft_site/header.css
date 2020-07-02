@@ -20,6 +20,7 @@ div#header-content
 {
     display: inline-flex;
     z-index: 1;
+    width: inherit;
 }
 
 @media (max-width:1279px)
@@ -91,7 +92,6 @@ h2#header-button
     padding: 0px 0px;
     font-family: "Perso";
     color: var(--color-main-darker);
-    /*filter: drop-shadow(0px 0px 2px #000);*/
     cursor: pointer;
     border-bottom: solid;
     border-width: 0px;
@@ -102,4 +102,55 @@ h2#header-button
 h2#header-button:hover
 {
     border-width: 3px;
+}
+
+div#ip-container
+{
+    width: inherit;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div#ip-adress
+{
+    width: fit-content;
+    height: inherit;
+    margin: 10px;
+    padding: 0px 10px;
+    box-shadow: inset 0px 0px 5px var(--shadows);
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    background-color: var(--color-yellow);
+}
+
+p#ip-adress
+{
+    font-family: "Perso";
+    font-size: 20px;
+    color: var(--color-main-darker);
+    user-select: none;
+    -moz-user-select: none;
+}
+
+p#ip-value
+{
+    font-family: "Perso";
+    font-size: 20px;
+    color: var(--color-blue);
+    user-select: none;
+    -moz-user-select: none;
+    border-bottom: solid;
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 2px;
+    transition: border-color 200ms ease-in-out;
+    cursor: pointer;
+}
+p#ip-value:hover
+{
+    border-color: var(--color-blue);
 }

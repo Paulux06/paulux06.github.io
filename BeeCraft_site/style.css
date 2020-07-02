@@ -36,6 +36,9 @@ body
     --color-main-lighter: #000;
     --color-main-dark: #634b39;
     --color-main-darker: #453427;
+    --color-blue: #0028b3;
+    --color-orange: #ffb300;
+    --color-yellow: #f1e711;
     --gradient: linear-gradient(90deg, rgba(241,231,17,1) 0%, rgba(255,179,0,1) 100%);
     --gradient_dark: linear-gradient(90deg, rgba(149,141,0,1) 0vw, rgba(149,105,0,1) 100vw);
     --shadows: rgba(0, 0, 0, 0.4);
@@ -154,4 +157,6 @@ p#footer
     display: block;
     padding: 0px;
     margin: 2px;
+    user-select: none;
+    -moz-user-select: none;
 }

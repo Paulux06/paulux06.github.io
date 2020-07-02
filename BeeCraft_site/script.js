@@ -24,6 +24,7 @@ window.onload = function()
 {
     var options = document.getElementById("header-options");
     options.style.height = "80px";
+
     var toogleOptions = document.getElementById("header-toogle");
     toogleOptions.onclick = function(ev)
     {
@@ -35,5 +36,16 @@ window.onload = function()
                 options.style.height = "80px";
         }
         //console.log(options.style.height.substring(0, options.style.height.length-2));
+    }
+
+    var ipAdress = document.getElementById("ip-value");
+    ipAdress.onclick = function(ev)
+    {
+        var txtar = document.createElement("textarea");
+        txtar.value = ipAdress.innerHTML;
+        document.body.appendChild(txtar);
+        txtar.select();
+        document.execCommand("copy");
+        document.body.removeChild(txtar);
     }
 }
