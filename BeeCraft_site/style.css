@@ -34,10 +34,10 @@ body
     --color-main: #000;
     --color-main-light: #000;
     --color-main-lighter: #000;
-    --color-main-dark: #000;
-    --color-main-darker: #000;
+    --color-main-dark: #634b39;
+    --color-main-darker: #453427;
     --gradient: linear-gradient(90deg, rgba(241,231,17,1) 0%, rgba(255,179,0,1) 100%);
-    --gradient_dark: linear-gradient(90deg, rgba(149,141,0,1) 0%, rgba(149,105,0,1) 100%);
+    --gradient_dark: linear-gradient(90deg, rgba(149,141,0,1) 0vw, rgba(149,105,0,1) 100vw);
     --shadows: rgba(0, 0, 0, 0.4);
 }
 
@@ -74,7 +74,7 @@ body
 p#welcome-banner
 {
     background: var(--gradient);
-    color: var(--color-main-light);
+    color: var(--color-main-darker);
     font-family: "Perso";
     font-size: 25px;
     text-align: center;
@@ -132,4 +132,25 @@ div#content
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+div#footer
+{
+    margin-top: 40px;
+    margin-left: 43vw;
+    background: var(--gradient);
+    width: 14vw;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: table;
+
+}
+
+p#footer
+{
+    font-family: "Perso";
+    font-size: 12px;
+    color: var(--color-main-darker);
+    display: table-row;
 }

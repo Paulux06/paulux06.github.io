@@ -32,7 +32,8 @@ div#header-content
         width: fit-content;
         padding-right: 40px;
         overflow: hidden;
-        background: linear-gradient(90deg, #f4dd0e 0%, #f7d40b 100%);
+        background: var(--gradient);
+        background-attachment: fixed;
         transition: height 200ms ease-in-out;
     }
     img#header-toogle
@@ -64,9 +65,10 @@ img#header-icon
     width: 60px;
     height: 60px;
     margin: 13px 5px;
+    margin-right: 40px;
 }
 
-h1#header-title
+/*h1#header-title
 {
     user-select: none;
     margin: 25px 5px;
@@ -80,7 +82,7 @@ h1#header-title
     background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0px 0px 2px #000);
-}
+}*/
 
 h2#header-button
 {
@@ -88,20 +90,16 @@ h2#header-button
     margin-top: 28px;
     padding: 0px 0px;
     font-family: "Perso";
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0px 0px 2px #000);
+    color: var(--color-main-darker);
+    /*filter: drop-shadow(0px 0px 2px #000);*/
     cursor: pointer;
     border-bottom: solid;
     border-width: 0px;
-    border-image: var(--gradient);
-    border-image-slice: 1;
+    border-color: var(--color-main-darker);
     transition: border-width 70ms ease-in-out;
     user-select: none;
 }
 h2#header-button:hover
 {
-    border-width: 4px;
+    border-width: 3px;
 }

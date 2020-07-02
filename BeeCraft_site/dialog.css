@@ -47,7 +47,7 @@ div#dialog-answer
 h3#dialog-title
 {
     font-family: "Perso";
-    font-size: 35px;
+    font-size: 1.8vw;
     background: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -61,11 +61,8 @@ h3#dialog-title
 p#dialog-text
 {
     font-family: "Perso";
-    font-size: 20px;
-    background: var(--gradient_dark);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 1.1vw;
+    color: var(--color-main-darker);
     user-select: none;
     -moz-user-select: none;
 }
