@@ -1,5 +1,6 @@
 var titleImage = document.createElement("div");
 var title = document.createElement("div");
+var bee = document.createElement("div");
 var content = document.createElement("div");
 
 var footerText = [
@@ -28,6 +29,7 @@ window.onload = function()
     titleImage = document.getElementById("title-image");
     content = document.getElementById("content");
     title = document.getElementById("title-text");
+    bee = document.getElementById("title-icon");
     showHome();
 }
 
@@ -37,6 +39,7 @@ function showHome()
     changeTitleTo("BeeCraft")
     clearContent();
     closeMenu();
+    showBee();
     setTimeout(() => {
         createHome();
         createFooter();
@@ -49,6 +52,7 @@ function showShop()
     changeTitleTo("Boutique")
     clearContent();
     closeMenu();
+    hideBee();
     setTimeout(() => {
         createShop();
         createFooter();
@@ -63,12 +67,14 @@ function clearContent()
         var childCount = content.childNodes.length;
         for (let i = 0; i < childCount; i++) {
             const element = content.childNodes[0];
-            console.log("clearing", element)
             element.remove();
         }
         content.style.opacity = "1";
     }, 250);
 }
+
+function hideBee() {bee.style.width = "0px";}
+function showBee() {bee.style.width = "6vw";}
 
 function changeTitleTo(newTitle)
 {

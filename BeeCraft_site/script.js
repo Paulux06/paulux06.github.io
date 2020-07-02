@@ -45,6 +45,7 @@ function closeMenu()
 
 function copyIP()
 {
+    var ipAdress = document.getElementById("ip-value")
     var txtar = document.createElement("textarea");
     txtar.value = ipAdress.innerHTML;
     document.body.appendChild(txtar);
