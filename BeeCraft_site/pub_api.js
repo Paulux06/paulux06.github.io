@@ -1,7 +1,6 @@
 function getVoteNmb()
 {
-    var serverToken = "sYXVbA0eUuwCvK9";
-    var url = "https://serveur-prive.net/api/stats/json/"+serverToken+"/vote";
+    var url = "https://serveur-prive.net/api/stats/json/"+getToken()+"/vote";
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {

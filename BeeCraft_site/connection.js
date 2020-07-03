@@ -83,7 +83,6 @@ function sign_in()
         var email_input = document.getElementById("connection-email").value;
         var pseudo_input = document.getElementById("connection-pseudo").value;
         var password_input = document.getElementById("connection-password").value;
-        var password_encrypted = password_input;
         if (connectMode)
         {
             var inscrit = false;
@@ -92,7 +91,7 @@ function sign_in()
                 if (data[key]["Email"] == email_input)
                 {
                     inscrit = true;
-                    if (password_encrypted == data[key]["Password"])
+                    if (getEncrypted(password_input, key) == data[key]["Password"])
                     {
                         showLog("Connexion réussie, bienvenue "+data[key]["Name"]+" !");
                         clearInputs();
@@ -157,9 +156,11 @@ function sign_in()
                 {
                     var IDfound = false;
                     var accountIndex = 0;
+                    var key = 0;
                     while(!IDfound)
                     {
                         accountIndex = Math.round(Math.random() * 100000);
+                        key=accountIndex;
                         for (let i = 0; i < keys.length; i++) {
                             IDfound = (parseInt(keys[i], 10) != accountIndex)
                             if (!IDfound)
@@ -168,14 +169,14 @@ function sign_in()
                     }
                     var newAccount = {
                         "Name": pseudo_input,
-                        "Password": password_encrypted,
+                        "Password": getEncrypted(password_input, key),
                         "Email": email_input
                     };
                     var Accounts = JSON.parse(JSON.stringify(data));
                     Accounts[accountIndex] = newAccount;
                     database.ref().child("Accounts").set(Accounts);
                     showLog("Votre compte à été créé, bienvenue "+pseudo_input+" !");
-                    setTimeout(() => {hidePseudo(); sign_in();}, 1000);
+                    setTimeout(() => {hidePseudo(); sign_in();}, 500);
                 }
                 else
                 showLog("Ce mot de passe est trop court ! Un peu de tenue !")

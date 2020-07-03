@@ -11,6 +11,8 @@ firebase.initializeApp(config);
 // Get a reference to the database service
 var database = firebase.database();
 
+function getEncrypted(x,t) {return gt(x,t);}
+
 //database.ref().child("Chat").on('value', snap => console.log(JSON.stringify(snap.val())));
 
 /*
