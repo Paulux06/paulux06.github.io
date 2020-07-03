@@ -96,7 +96,7 @@ function sign_in()
                     {
                         showLog("Connexion réussie, bienvenue "+data[key]["Name"]+" !");
                         clearInputs();
-                        setTimeout(hideConnectionTab, 2000);
+                        setTimeout(hideConnectionTab, 1000);
                         clientInfos = {
                             name: data[key]["Name"],
                             email: data[key]["Email"],
@@ -155,16 +155,27 @@ function sign_in()
             {
                 if (password_input.length > 4)
                 {
+                    var IDfound = false;
+                    var accountIndex = 0;
+                    while(!IDfound)
+                    {
+                        accountIndex = Math.round(Math.random() * 100000);
+                        for (let i = 0; i < keys.length; i++) {
+                            IDfound = (parseInt(keys[i], 10) != accountIndex)
+                            if (!IDfound)
+                                break;
+                        }
+                    }
                     var newAccount = {
                         "Name": pseudo_input,
                         "Password": password_encrypted,
                         "Email": email_input
                     };
                     var Accounts = JSON.parse(JSON.stringify(data));
-                    Accounts[keys.length] = newAccount;
+                    Accounts[accountIndex] = newAccount;
                     database.ref().child("Accounts").set(Accounts);
-                    showLog("Votre compte à été créé, bienvenue "+pseudo_input+" !")
-                    clearInputs();
+                    showLog("Votre compte à été créé, bienvenue "+pseudo_input+" !");
+                    setTimeout(() => {hidePseudo(); sign_in();}, 1000);
                 }
                 else
                 showLog("Ce mot de passe est trop court ! Un peu de tenue !")
