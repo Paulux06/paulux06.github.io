@@ -154,6 +154,15 @@ function sign_in()
             {
                 if (password_input.length > 4)
                 {
+                    for (let i = 0; i < password_input.length; i++) {
+                        if(password_input[i] == "\\" || password_input[i] == "\'")
+                        {
+                            showLog("Désolé, les charactères ' et \\ ne sont interdits dans les mots de passe.")
+                            password_input = "";
+                            return;
+                        }
+                        
+                    }
                     var IDfound = false;
                     var accountIndex = 0;
                     var key = 0;
