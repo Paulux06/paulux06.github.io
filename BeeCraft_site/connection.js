@@ -157,7 +157,7 @@ function sign_in()
                     for (let i = 0; i < password_input.length; i++) {
                         if(password_input[i] == "\\" || password_input[i] == "\'")
                         {
-                            showLog("Désolé, les charactères ' et \\ ne sont interdits dans les mots de passe.")
+                            showLog("Désolé, les charactères ' et \\ sont interdits dans les mots de passe.")
                             password_input = "";
                             return;
                         }
