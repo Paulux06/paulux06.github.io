@@ -39,7 +39,6 @@ function toogleMenu()
         else
             options.style.height = "80px";
     }
-    console.log(options.style.height.substring(0, options.style.height.length-2));
 }
 function closeMenu()
 {
