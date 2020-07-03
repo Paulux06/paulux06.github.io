@@ -91,7 +91,9 @@ function sign_in()
                 if (data[key]["Email"] == email_input)
                 {
                     inscrit = true;
-                    if (getEncrypted(password_input, key) == data[key]["Password"])
+                    console.log(getEncrypted(password_input, parseInt(key.toString())) + ' | ' + data[key]["Password"])
+                    console.log(getEncrypted(password_input, key) == data[key]["Password"])
+                    if (getEncrypted(password_input, key).trim == data[key]["Password"].trim)
                     {
                         showLog("Connexion réussie, bienvenue "+data[key]["Name"]+" !");
                         clearInputs();
