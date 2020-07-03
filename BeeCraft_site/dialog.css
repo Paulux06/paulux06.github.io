@@ -22,7 +22,7 @@ div#dialog
         background-size: cover;
         border-radius: 10px;
     }
-    div#dialog {margin-left: 30vw;}
+    div#dialog {margin-left: 10vw; width: 80vw;}
 }
 @media (min-width: 1280px)
 {

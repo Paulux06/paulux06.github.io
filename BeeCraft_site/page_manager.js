@@ -24,18 +24,9 @@ var homeDialogs = [
     ]},
 ]
 
-window.onload = function()
-{
-    titleImage = document.getElementById("title-image");
-    content = document.getElementById("content");
-    title = document.getElementById("title-text");
-    bee = document.getElementById("title-icon");
-    showHome();
-}
-
 function showHome()
 {
-    titleImage.style.height = "25vw";
+    document.getElementById("title-image").style.height = "20vw";
     changeTitleTo("BeeCraft")
     clearContent();
     closeMenu();
@@ -48,7 +39,7 @@ function showHome()
 
 function showShop()
 {
-    titleImage.style.height = "8.5vw";
+    document.getElementById("title-image").style.height = "8.5vw";
     changeTitleTo("Boutique")
     clearContent();
     closeMenu();
@@ -61,6 +52,7 @@ function showShop()
 
 function clearContent()
 {
+    var content = document.getElementById("content")
     content.style.opacity = "0.5";
     setTimeout(() => {
         //clear the div
@@ -73,11 +65,12 @@ function clearContent()
     }, 250);
 }
 
-function hideBee() {bee.style.width = "0px";}
-function showBee() {bee.style.width = "6vw";}
+function hideBee() {document.getElementById("title-icon").style.width = "0px";}
+function showBee() {document.getElementById("title-icon").style.width = "6vw";}
 
 function changeTitleTo(newTitle)
 {
+    var title = document.getElementById("title-text")
     title.style.opacity = "0";
     setTimeout(() => {
         title.innerHTML = newTitle;
@@ -95,7 +88,7 @@ function createFooter()
         text.innerHTML = footerText[i];
         footer.appendChild(text);
     }
-    content.appendChild(footer);
+    document.getElementById("content").appendChild(footer);
 }
 
 function createHome()
@@ -125,7 +118,7 @@ function createHome()
         dialogQuestion.appendChild(dialogTitle);
         dialogDIV.appendChild(dialogQuestion);
         dialogDIV.appendChild(dialogAnswer);
-        content.appendChild(dialogDIV);
+        document.getElementById("content").appendChild(dialogDIV);
     }
 }
 
@@ -133,5 +126,5 @@ function createShop()
 {
     var text = document.createElement("p")
     text.innerHTML = "Désolé, le shop n'est pas encore disponible. =(";
-    content.appendChild(text);
+    document.getElementById("content").appendChild(text);
 }

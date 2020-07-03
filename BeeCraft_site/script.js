@@ -23,6 +23,9 @@ window.addEventListener("scroll", function(event) {
 window.onload = function()
 {
     document.getElementById("header-options").style.height = "80px";
+    getVoteNmb();
+    showHome();
+    hidePseudo();
 }
     
 function toogleMenu()

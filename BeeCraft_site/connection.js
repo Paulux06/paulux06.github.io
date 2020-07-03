@@ -1,0 +1,174 @@
+var connectMode = false;
+var clientInfos = undefined;
+
+function showConnectionTab()
+{
+    document.getElementById("page").style.filter = "blur(10px)";
+    document.getElementById("connection-container").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("connection-container").style.opacity = "1";
+        document.getElementById("connection-box").style.transform = "translateY(0vh)";
+    }, 30);
+    if (clientInfos != undefined)
+        document.getElementById("connection-deco-div").style.display = "block";
+    else
+        document.getElementById("connection-deco-div").style.display = "none";
+}
+
+function hideConnectionTab()
+{
+    document.getElementById("page").style.filter = "blur(0px)";
+    document.getElementById("connection-container").style.opacity = "0";
+    document.getElementById("connection-box").style.transform = "translateY(-25vh)";
+    setTimeout(() => {
+        document.getElementById("connection-container").style.display = "none";
+    }, 250);
+    clearInputs();
+}
+
+function showPseudo()
+{
+    document.getElementById("connection-inscrit-button").style.background = "var(--gradient)";
+    document.getElementById("connection-connect-button").style.background = "var(--gradient_dark)";
+    document.getElementById("connection-div-pseudo").style.height = "80px";
+    connectMode = false;
+}
+
+function hidePseudo()
+{
+    document.getElementById("connection-connect-button").style.background = "var(--gradient)";
+    document.getElementById("connection-inscrit-button").style.background = "var(--gradient_dark)";
+    document.getElementById("connection-div-pseudo").style.height = "0px";
+    connectMode = true;
+}
+
+function showLog(message)
+{
+    var log = document.getElementById("connection-log")
+    log.innerHTML = message;
+    log.style.height = "20px";
+    setTimeout(() => {if(log.style.height == "20px") log.style.height = "0px";}, 2000);
+}
+
+function disconnectClient()
+{
+    clientInfos = undefined;
+    setClientName("Connecte-toi !");
+    showLog("Vous avez bien été déconnecté.");
+    setTimeout(hideConnectionTab, 1000);
+}
+
+function setClientName(newName)
+{
+    document.getElementById("connection-text").innerHTML = newName;
+}
+
+function clearInputs()
+{
+    document.getElementById("connection-email").value = "";
+    document.getElementById("connection-pseudo").value = "";
+    document.getElementById("connection-password").value = "";
+}
+
+function sign_in()
+{
+    database.ref().child("Accounts").once('value').then((info) => {
+        var data = JSON.parse(JSON.stringify(info));
+        if (data == null) 
+        {
+            showLog("Désolé, une erreur s'est produite.");
+            return;
+        }
+        var keys = Object.keys(data);
+        var email_input = document.getElementById("connection-email").value;
+        var pseudo_input = document.getElementById("connection-pseudo").value;
+        var password_input = document.getElementById("connection-password").value;
+        var password_encrypted = password_input;
+        if (connectMode)
+        {
+            var inscrit = false;
+            for (let i = 0; i < keys.length; i++) {
+                const key = keys[i];
+                if (data[key]["Email"] == email_input)
+                {
+                    inscrit = true;
+                    if (password_encrypted == data[key]["Password"])
+                    {
+                        showLog("Connexion réussie, bienvenue "+data[key]["Name"]+" !");
+                        clearInputs();
+                        setTimeout(hideConnectionTab, 2000);
+                        clientInfos = {
+                            name: data[key]["Name"],
+                            email: data[key]["Email"],
+                            index: key
+                        }
+                        setClientName(data[key]["Name"])
+                    }
+                    else
+                    {
+                        showLog("Mauvais mot de passe, veillez réessayer.")
+                        setClientName("Connecte-toi !")
+                        clientInfos = undefined;
+                    }
+                }
+            }
+            if (!inscrit)
+            {
+                showLog("Vous ne vous êtes pas encore inscrit.")
+                setTimeout(showPseudo, 1000);
+            }
+        }
+        else
+        {
+            if (email_input.length < 1)
+            {
+                showLog("Veillez entrer un Email.")
+                return;
+            }
+            if (email_input.length < 1)
+            {
+                showLog("Veillez entrer un pseudo.")
+                return;
+            }
+            if (email_input.length < 1)
+            {
+                showLog("Veillez entrer un mot de passe.")
+                return;
+            }
+            var alreadyUsed = false;
+            for (let i = 0; i < keys.length; i++) {
+                const key = keys[i];
+                if (data[key]["Email"] == email_input)
+                {
+                    alreadyUsed = true;
+                    showLog("Cet Email est déja pris, essayez de vous connecter !")
+                    setTimeout(hidePseudo, 1000);
+                }
+                if (data[key]["Name"] == pseudo_input)
+                {
+                    alreadyUsed = true;
+                    showLog("Ce pseudo est déja pris, essayez de vous connecter !")
+                    setTimeout(hidePseudo, 1000);
+                }
+            }
+            if (!alreadyUsed)
+            {
+                if (password_input.length > 4)
+                {
+                    var newAccount = {
+                        "Name": pseudo_input,
+                        "Password": password_encrypted,
+                        "Email": email_input
+                    };
+                    var Accounts = JSON.parse(JSON.stringify(data));
+                    Accounts[keys.length] = newAccount;
+                    database.ref().child("Accounts").set(Accounts);
+                    showLog("Votre compte à été créé, bienvenue "+pseudo_input+" !")
+                    clearInputs();
+                }
+                else
+                showLog("Ce mot de passe est trop court ! Un peu de tenue !")
+            }
+        }
+    });
+}
