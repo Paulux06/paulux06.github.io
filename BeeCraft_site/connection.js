@@ -120,17 +120,17 @@ function sign_in()
         }
         else
         {
-            if (email_input.length < 1)
-            {
-                showLog("Veillez entrer un Email.")
-                return;
-            }
-            if (email_input.length < 1)
+            if (pseudo_input.length < 1)
             {
                 showLog("Veillez entrer un pseudo.")
                 return;
             }
             if (email_input.length < 1)
+            {
+                showLog("Veillez entrer un Email.")
+                return;
+            }
+            if (password_input.length < 1)
             {
                 showLog("Veillez entrer un mot de passe.")
                 return;
