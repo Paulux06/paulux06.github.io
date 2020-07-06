@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BeeCraft - Serveur Minecraft</title>
+    <link rel="icon" type="image/png" href="./ressources/beecraft_logo.png" />
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./dialog.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./connexion.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="./ressources/pik.js"></script>
+    <script src="./connection.js"></script>
+    <script src="./database.js"></script>
+    <script src="./pub_api.js"></script>
+    <script src="./page_manager.js"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div id="page">
+        <div id="welcome-banner">
+            <p id="welcome-text">Bienvenue sur BeeCraft !</p>
+            <p id="votes-counter"></p>
+            <a href="https://serveur-prive.net/minecraft/beecraft-3485/vote" id="vote-for-server">Voter</a>
+            <div id="connection-div">
+                <div id="connection-inside-div">
+                    <p id="connection-text" onclick="showConnectionTab()">Connecte-toi !</p>
+                </div>
+            </div>
+        </div>
+        <div id="title-image">
+            <img src="./ressources/beecraft_bee.png" alt="BeeCraft" id="title-icon" draggable="false">
+            <h1 id="title-text">BeeCraft</h1>
+        </div>
+        <div id="header-spacer"></div>
+        <div id="header-div">
+            <div id="header-content">
+                <img src="./ressources/beecraft_bee.png" alt="BeeCraft" id="header-icon" draggable="false">
+                <div id="header-options">
+                    <img src="./ressources/header_toogle.png" alt="BeeCraft" draggable="false" id="header-toogle" onclick="toogleMenu()">
+                <h2 id="header-button" onclick="showHome()">Accueil</h2>
+                <h2 id="header-button" onclick="showShop()">Boutique</h2>
+                </div>
+                <div id="ip-container">
+                    <div id="ip-adress">
+                        <p id="ip-adress">IP:</p>
+                        <p id="ip-value" onclick="copyIP()">play.beecraft.fr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cont-back">
+            <div id="content">
+                
+            </div>
+        </div>
+    </div>
+    <div id="connection-container">
+        <div id="connection-box">
+            <div id="connection-choose-box">
+                <input type="button" value="Se connecter" id="connection-connect-button" onclick="hidePseudo()">
+                <input type="button" value="S'inscrire" id="connection-inscrit-button" onclick="showPseudo()">
+            </div>
+            <div id="connection-content">
+                <div id="connection-deco-div">
+                    <input type="button" id="connection-deco-button" value="déconnexion" onclick="disconnectClient()">
+                </div>
+                <div id="connection-div-pseudo">
+                    <p id="connection-info">Pseudo (Minecraft):</p>
+                    <input type="text" id="connection-pseudo">
+                </div>
+                <p id="connection-info">Email:</p>
+                <input type="email" id="connection-email">
+                <p id="connection-info">Mot de passe:</p>
+                <input type="password" id="connection-password">
+                <div id="connection-buttons">
+                    <input type="button" id="connection-back-button" value="Retour" onclick="hideConnectionTab()">
+                    <input type="button" id="connection-enter-button" value="Continuer" onclick="sign_in()">
+                </div>
+                <p id="connection-log">-- ici le log --</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

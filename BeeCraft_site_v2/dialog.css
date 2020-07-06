@@ -1,0 +1,77 @@
+div#dialog
+{
+    background: var(--gradient);
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 40vw;
+    height: fit-content;
+    padding: 4px;
+    margin: 25px 40px;
+    display: inline-flex;
+    box-shadow: 0px 0px 10px var(--shadows);
+}
+div#dialog-inside
+{
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    background-color: var(--color-back);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+div#dialog-question
+{
+    width: initial;
+    height: fit-content;
+    vertical-align: middle;
+    height: inherit;
+    text-align: center;
+    border-bottom: solid;
+    border-right-width: 4px;
+    border-image: var(--gradient);
+    border-image-slice: 1;
+}
+
+@media (max-width: 1279px)
+{
+    div#dialog {max-width: 80vw;}
+}
+
+div#dialog-answer
+{
+    min-width: 35vw;
+    height: fit-content;
+    padding: 20px;
+}
+
+h3#dialog-title
+{
+    font-family: "Roboto regular";
+    font-size: 30px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 2px #000);
+    user-select: none;
+    -moz-user-select: none;
+}
+
+p#dialog-text
+{
+    font-family: "Roboto regular";
+    font-size: 16px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+@media (max-width: 1279px)
+{
+    h3#dialog-title {font-size: 40px;}
+    p#dialog-text {font-size: 25px;}
+}
