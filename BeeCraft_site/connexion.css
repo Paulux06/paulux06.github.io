@@ -28,9 +28,20 @@ p#votes-counter
     font-family: "Perso";
     font-size: 15px;
     margin: 0px;
-    margin-right: 50px;
+    margin-right: 10px;
     margin-top: 10px;
     width: inherit;
+    text-align: right;
+}
+a#vote-for-server
+{
+    color: var(--color-blue);
+    font-family: "Perso";
+    font-size: 15px;
+    margin: 0px;
+    margin-right: 50px;
+    margin-top: 10px;
+    width: fit-content;
     text-align: right;
 }
 
