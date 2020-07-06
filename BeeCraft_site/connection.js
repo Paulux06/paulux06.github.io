@@ -51,8 +51,11 @@ function showLog(message)
 {
     var log = document.getElementById("connection-log")
     log.innerHTML = message;
-    log.style.height = "20px";
-    setTimeout(() => {if(log.style.height == "20px") log.style.height = "0px";}, 2000);
+    if (document.documentElement.clientWidth > 1279) 
+        log.style.height = "20px";
+    else
+        log.style.height = "40px";
+    setTimeout(() => {if(log.style.height != "0px") log.style.height = "0px";}, 2000);
 }
 
 function disconnectClient()

@@ -215,7 +215,6 @@ p#connection-log
 
 @media (max-width: 1279px)
 {
-    div#connection-box {height: 50vh;}
     input#connection-enter-button, input#connection-back-button, input#connection-deco-button {font-size: 40px;}
     input#connection-connect-button, input#connection-inscrit-button {font-size: 40px; width: 400px;}
     input#connection-password, input#connection-email, input#connection-pseudo {font-size: 30px;}
