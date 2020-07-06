@@ -37,7 +37,6 @@ p#votes-counter
 div#connection-div
 {
     width: max-content;
-    height: 30px;
     margin: 5px;
     padding: 0px;
     padding-right: 8px;
@@ -66,14 +65,22 @@ p#connection-text:hover
 {
     color: var(--color-blue);
 }
+@media (max-width: 1279px)
+{
+    p#votes-counter {font-size: 20px; margin-top: 13px;}
+    p#welcome-text {margin-top: 10px;}
+    div#welcome-banner {height: 50px;}
+    div#connexion-div {height: 40px;}
+    p#connection-text {font-size: 30px;}
+}
 
 div#connection-container
 {
     position: fixed;
-    height: 100vh;
-    width: 100vw;
     top: 0px;
     left: 0px;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 10;
     opacity: 0;
@@ -159,7 +166,7 @@ input#connection-connect-button, input#connection-inscrit-button
     outline: none;
     font-family: "Perso";
     font-size: 15px;
-    width: 100px;
+    width: 120px;
 }
 input#connection-inscrit-button
 {
@@ -188,7 +195,7 @@ input#connection-password, input#connection-email, input#connection-pseudo
     background-color: var(--color-yellow);
 }
 
-p#connection-info 
+p#connection-info
 {
     font-family: "Perso";
     font-size: 15px;
@@ -204,4 +211,14 @@ p#connection-log
     height: 0px;
     overflow: hidden;
     transition: height 0.25s var(--transition-type);
+}
+
+@media (max-width: 1279px)
+{
+    div#connection-box {height: 50vh;}
+    input#connection-enter-button, input#connection-back-button, input#connection-deco-button {font-size: 40px;}
+    input#connection-connect-button, input#connection-inscrit-button {font-size: 40px; width: 400px;}
+    input#connection-password, input#connection-email, input#connection-pseudo {font-size: 30px;}
+    p#connection-info {font-size: 30px;}
+    p#connection-log {font-size: 30px;}
 }

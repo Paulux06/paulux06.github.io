@@ -3,11 +3,12 @@ var clientInfos = undefined;
 
 function showConnectionTab()
 {
-    document.getElementById("page").style.filter = "blur(10px)";
+    document.getElementById("page").style.filter = "blur(0px)";
     document.getElementById("connection-container").style.display = "block";
     setTimeout(() => {
         document.getElementById("connection-container").style.opacity = "1";
         document.getElementById("connection-box").style.transform = "translateY(0vh)";
+        document.getElementById("page").style.filter = "blur(10px)";
     }, 30);
     if (clientInfos != undefined)
         document.getElementById("connection-deco-div").style.display = "block";
@@ -22,6 +23,7 @@ function hideConnectionTab()
     document.getElementById("connection-box").style.transform = "translateY(-25vh)";
     setTimeout(() => {
         document.getElementById("connection-container").style.display = "none";
+        document.getElementById("page").style.filter = "none";
     }, 250);
     clearInputs();
 }
@@ -30,7 +32,10 @@ function showPseudo()
 {
     document.getElementById("connection-inscrit-button").style.background = "var(--gradient)";
     document.getElementById("connection-connect-button").style.background = "var(--gradient_dark)";
-    document.getElementById("connection-div-pseudo").style.height = "80px";
+    if (document.documentElement.clientWidth > 1279)
+        document.getElementById("connection-div-pseudo").style.height = "80px";
+    else
+        document.getElementById("connection-div-pseudo").style.height = "150px";
     connectMode = false;
 }
 

@@ -2,7 +2,7 @@ var headerOffsetTop = 0;
 
 window.addEventListener("scroll", function(event) {
     var headerSpacer = document.getElementById("header-spacer");
-    var header = document.getElementById("header");
+    var header = document.getElementById("header-div");
     var isFixed = (header.style.position == "fixed");
     if (!isFixed)
         headerOffsetTop = header.offsetTop;

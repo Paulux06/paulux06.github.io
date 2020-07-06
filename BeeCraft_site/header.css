@@ -6,10 +6,10 @@ div#header-spacer
     background-color: black;
 }
 
-div#header {
+div#header-div {
     background: var(--gradient);
     position: relative;
-    top: 0;
+    top: 0px;
     width: 100vw;
     height: 80px;
     z-index: 1;
@@ -88,6 +88,8 @@ h2#header-button
 {
     margin-left: 40px;
     margin-top: 28px;
+    top: 0px;
+    left: 0px;
     padding: 0px 0px;
     font-family: "Perso";
     color: var(--color-main-darker);

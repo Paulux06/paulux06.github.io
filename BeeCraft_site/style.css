@@ -80,10 +80,14 @@ div#page
 {
     width: 100vw;
     height: 100vh;
-    filter: blur(0px);
     margin: 0px;
     padding: 0px;
+    filter: none;
     transition: filter 0.25s var(--transition-type);
+}
+@media (max-width: 1279px)
+{
+    div#page {transition: none;}
 }
 
 div#title-image
@@ -127,7 +131,7 @@ h1#title-text
 
 @media (max-width: 1279px)
 {
-    h1#title-text {font-size: 6vw;}
+    h1#title-text {font-size: 12vw;}
 }
 
 div#cont-back
@@ -142,7 +146,7 @@ div#cont-back
 div#content
 {
     text-align: center;
-    min-height: 75vh;
+    min-height: 85vh;
     width: 100vw;
     display: flexbox;
     align-items: center;
