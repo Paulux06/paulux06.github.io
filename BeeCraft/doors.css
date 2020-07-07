@@ -1,0 +1,63 @@
+div#doors
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: inline-flex;
+    z-index: 100;
+}
+
+div#left-door
+{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 50vw;
+    height: 100vh;
+    background-color: var(--color-yellow-light);
+    transition: width 0.25s var(--transition-smooth);
+}
+
+div#right-door
+{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 50vw;
+    height: 100vh;
+    background-color: var(--color-yellow-light);
+    transition: width 0.25s var(--transition-smooth);
+}
+
+div#logo-container
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 0.25s var(--transition-smooth);
+}
+div#beecraft-logo
+{
+    position: fixed;
+    top: 45vh;
+    left: 47vw;
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    width: 6vw;
+    height: 6vw;
+    background-image: url("./ressources/beecraft_bee.png");
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.25s var(--transition-smooth), transform 0.25s var(--transition-smooth);
+}
+
+@keyframes rotate {
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+.rotating
+{
+    animation: 1.5s rotate var(--transition-smooth) infinite;
+}
