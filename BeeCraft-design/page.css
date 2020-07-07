@@ -7,6 +7,7 @@ body
     background: var(--gradient-black);
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 div#page
@@ -50,10 +51,11 @@ h1#header-title
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    height: fit-content;
+    height: max-content;
     margin-left: 10px;
     font-size: 35px;
     margin-top: 10px;
+    margin-bottom: 0px;
     font-family: "Roboto black";
 }
 
@@ -169,6 +171,7 @@ div#more-button-div
     transform: translate(-50%, 0%);
     transition: border-color 0.5s var(--transition-ease-out), transform 0.5s var(--transition-ease-out)
     , padding 0.5s var(--transition-ease-out), bakground-color 0.5s var(--transition-ease-out);
+    text-align: center;
 }
 div#more-button-div:hover
 {

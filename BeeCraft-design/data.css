@@ -1,8 +1,9 @@
 ::-webkit-scrollbar
 {
     display: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: 0;
+    scrollbar-width: 0;
+    width: 0;
 }
 
 :root
