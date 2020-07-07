@@ -5,6 +5,7 @@ div#dialogs-container
     background-color: var(--color-white-light);
     z-index: 4;
     text-align: center;
+    overflow: hidden;
 }
 
 div#dialog-div
@@ -13,6 +14,7 @@ div#dialog-div
     height: fit-content;
     display: inline-flex;
     margin-top: 0vh;
+    opacity: 0;
 }
 
 div#dialog-left-panel, div#dialog-right-panel
