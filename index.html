@@ -3,24 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Paulux | Site officiel</title>
+    <link rel="shortcut icon" href="./resources/pics/icon.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="connexion.css">
     <link rel="stylesheet" href="style.css">
-    <script src="colors.js"></script>
-    <script src="templates.js"></script>
+    <script src="./resources/pik.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+    <script src="firebase.js"></script>
+    <script src="connexion.js"></script>
+    <script src="content.js"></script>
     <script src="pages.js"></script>
-    <script src="script.js"></script>
+
+    <script src="./home/home.js"></script>
+    <link rel="stylesheet" href="./home/home.css">
+
+    <script src="index.js"></script>
 </head>
 <body>
-    <div id="content">
-        <div id="topbar"></div>
-        <div id="main">
-            <div id="explorer">
-                <div id="selector"></div>
+    <div id="page-content-container">
+        <div id="header-container">
+            <div id="header-icon-container">
+                <img src="./resources/pics/logo_white.png" alt="icon" id="header-icon-image">
             </div>
-            <div id="page">
-                <div id="page-content"></div>
+            <div id="header-option-container">
+                <div id="header-option-div">
+                    <p id="header-option-text" class="button" onclick="goHome()">Acceuil</p>
+                </div>
+                <div id="header-option-div">
+                    <p id="header-option-text" class="button" onclick="goProjects()">Mes projets</p>
+                </div>
+                <div id="header-option-div">
+                    <p id="header-option-text" class="button" onclick="goVideos()">Mes vidéos</p>
+                </div>
+                <div id="header-option-div">
+                    <p id="header-option-text" class="button" onclick="goCommunity()">Communauté</p>
+                </div>
+            </div>
+            <div id="header-connexion-container">
+                <div id="header-connexion-div">
+                    <input type="button" value="se connecter" id="header-connexion-button" class="button" onclick="showConnect()">
+                </div>
+            </div>
+        </div>
+        <div id="content-container">
+
+        </div>
+        <div id="footer-centering">
+            <div id="footer-container">
+                <p id="footer-text">©2020 Paulux</p>
+                <p id="footer-text-min">Tout droits réservés.</p>
             </div>
         </div>
     </div>
-    <div id="popup"></div>
+    <div id="connexion-panel-container">
+        <div id="connexion-panel-div">
+            <div id="connect-mode-container">
+                <input type="button" value="S'inscrire" id="connect-mode-button" class="button" onclick="switchConnectMode()">
+            </div>
+            <div id="information-box">
+                <p id="pseudo-text" class="label">Pseudo:</p>
+                <input type="text" id="pseudo-input" class="input">
+                <div id="email-container">
+                    <p id="email-text" class="label">Email:</p>
+                    <input type="text" id="email-input" class="input">
+                </div>
+                <p id="password-text" class="label">Mot de passe:</p>
+                <input type="password" id="password-input" class="input">
+                <div id="confirm-container">
+                    <p id="confirm-text" class="label">Confirmation du mot de passe:</p>
+                    <input type="password" id="confirm-input" class="input">
+                </div>
+            </div>
+            <div id="stay-connected-div">
+                <input type="checkbox" id="stay-connected-box" class="input">
+                <p id="stay-connected-text" class="label">Rester connecté</p>
+            </div>
+            <div id="validation-box">
+                <input type="button" id="cancel-button" class="button" value="Annuler" onclick="hideConnect()">
+                <input type="button" id="validation-button" class="button" value="Valider" onclick="connect()">
+            </div>
+            <div id="connexion-console-container">
+                <p id="connexion-console-text" class="label">Message de console</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

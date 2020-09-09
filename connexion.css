@@ -1,0 +1,88 @@
+div#connexion-panel-container
+{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    left: 0px;
+    opacity: 1;
+    transition: opacity var(--animation-medium) var(--animation-ease);
+    background-color: var(--color-transparent-hiding);
+    display: flex;
+    justify-content: center;
+    z-index: 11;
+}
+div#connexion-panel-div
+{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 10px;
+    margin: 0px;
+    margin-top: 0px;
+    transition: margin-top var(--animation-medium) var(--animation-ease);
+    background-color: var(--color-transparent);
+    backdrop-filter: var(--blur);
+    border-radius: var(--border-radius);
+}
+
+div#connect-mode-container
+{
+    text-align: center;
+}
+
+div#information-box
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+input#pseudo-input, input#email-input, input#password-input, input#confirm-input
+{
+    margin-bottom: 20px;
+    min-width: 300px;
+}
+
+input#validation-button
+{
+    float: right;
+}
+
+div#stay-connected-div
+{
+    display: inline-flex;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+input#stay-connected-box
+{
+    margin: 2px;
+}
+
+p#stay-connected-text
+{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+div#confirm-container, div#email-container
+{
+    overflow: hidden;
+    transition: height var(--animation-medium) var(--animation-ease);
+}
+
+div#connexion-console-container
+{
+    margin: 0px;
+    margin-top: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: height var(--animation-medium) var(--animation-ease);
+}
+p#connexion-console-text
+{
+    width: inherit;
+}

@@ -1,0 +1,73 @@
+div#header-container
+{
+    height: var(--header-height);
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    background: var(--color-transparent);
+    backdrop-filter: var(--blur);
+    display: inline-flex;
+    box-shadow: 0px 0px 10px var(--color-shadow-strong);
+    border-radius: var(--border-radius);
+    transition: top var(--animation-medium) var(--animation-ease);
+    z-index: 10;
+}
+
+div#header-icon-container
+{
+    width: fit-content;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img#header-icon-image
+{
+    height: 40px;
+    margin: 0px 10px;
+    padding: 0px;
+    filter: var(--brightness);
+}
+
+div#header-option-container
+{
+    display: inline-flex;
+    margin: 0px 20px;
+    min-width: fit-content;
+}
+
+div#header-option-div
+{
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+p#header-option-text
+{margin: 0px;}
+
+div#header-connexion-container
+{
+    height: inherit;
+    line-height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div#header-connexion-div
+{
+    text-align: right;
+    display: block;
+}
+
+input#header-connexion-button
+{
+    margin: 0px 10px;
+    padding: 3px 10px;
+    font-size: 15px;
+}

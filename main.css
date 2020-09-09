@@ -1,0 +1,155 @@
+:root
+{
+    --color-primary-1: #2C7073;
+    --color-primary-2: #3D7C77;
+    --color-primary-3: #4C8579;
+    --color-primary-4: #62977D;
+    --color-primary-5: #93AC83;
+    --color-primary-6: #B0B783;
+
+    --color-transparent: rgba(255, 255, 255, 0.25);
+    --color-transparent-hover: rgba(255, 255, 255, 0.35);
+    --color-transparent-dark: rgba(0, 0, 0, 0.25);
+    --color-transparent-hover-dark: rgba(0, 0, 0, 0.35);
+    --color-transparent-hiding: rgba(0, 0, 0, 0.6);
+    --color-shadow-light: rgba(0, 0, 0, 0.2);
+    --color-shadow-strong: rgba(0, 0, 0, 0.4);
+    --border-radius: 10px;
+    --blur: blur(8px);
+
+    --color-light: rgb(255, 255, 255);
+    --color-dark: rgb(40, 40, 40);
+    --brightness: brightness(0.2);
+
+    --gradient-primary: linear-gradient(45deg, var(--color-primary-1) 0%, var(--color-primary-6) 100%);
+
+    --animation-ease: cubic-bezier(0.7, 0, 0.3, 1);
+    --animation-quick: 100ms;
+    --animation-medium: 250ms;
+    --animation-long: 500ms;
+
+    --header-height: 50px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background-image: url("./resources/pics/backblur.jpg");
+    background-size: 100vw 100vh;
+    background-position-x: right;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-transparent);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-transparent-hover);
+}
+
+@keyframes button-hover-in
+{
+    0% {
+        background-color: var(--color-transparent);
+        box-shadow: 0px 0px 10px var(--color-shadow-light);
+        transform: translateY(0px);
+    }
+    100% {
+        background-color: var(--color-transparent-hover);
+        box-shadow: 0px 2px 10px var(--color-shadow-strong);
+        transform: translateY(-2px);
+    }
+}
+@keyframes button-hover-out
+{
+    0% {
+        background-color: var(--color-transparent-hover);
+        box-shadow: 0px 2px 10px var(--color-shadow-strong);
+        transform: translateY(-2px);
+    }
+    100% {
+        background-color: var(--color-transparent);
+        box-shadow: 0px 0px 10px var(--color-shadow-light);
+        transform: translateY(0px);
+    }
+}
+
+@font-face
+{
+    src: url("./resources/fonts/Roboto-Medium.ttf");
+    font-family: "Roboto medium";
+}
+@font-face
+{
+    src: url("./resources/fonts/Roboto-Bold.ttf");
+    font-family: "Roboto bold";
+}
+@font-face
+{
+    src: url("./resources/fonts/Roboto-Light.ttf");
+    font-family: "Roboto light";
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("./resources/pics/back.jpg");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    padding-top: var(--header-height);
+    display: flex;
+    justify-content: center;
+}
+
+div#content-container
+{
+    width: 85vw;
+    min-height: 100vh;
+    margin: 0px;
+    margin-top: 40px;
+    padding: 0px;
+}
+
+div#footer-centering
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+}
+
+div#footer-container
+{
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 10px var(--color-shadow-light);
+    background: url("./resources/pics/backblur.jpg");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    padding: 4px 16px;
+    text-align: center;
+}
+
+p#footer-text
+{
+    color: var(--color-dark);
+    font-size: 16px;
+    margin: 0px;
+    font-family: "Roboto medium";
+    user-select: none;
+    -moz-user-select: none;
+}
+p#footer-text-min
+{
+    color: var(--color-dark);
+    font-size: 14px;
+    margin: 0px;
+    font-family: "Roboto medium";
+    user-select: none;
+    -moz-user-select: none;
+}
