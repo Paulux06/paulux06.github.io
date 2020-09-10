@@ -1,94 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Paulux | Site officiel</title>
-    <link rel="shortcut icon" href="./resources/pics/icon.png" type="image/png">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="connexion.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="./resources/pik.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
-    <script src="firebase.js"></script>
-    <script src="connexion.js"></script>
-    <script src="content.js"></script>
-    <script src="pages.js"></script>
-
-    <script src="./home/home.js"></script>
-    <link rel="stylesheet" href="./home/home.css">
-
-    <script src="index.js"></script>
-</head>
-<body>
-    <div id="page-content-container">
+    <head>
+        <meta charset="utf-8">
+        <title>Paulux | Site officiel</title>
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="header.css">
+        <script src="./header.js"></script>
+        <script src="./index.js"></script>
+    </head>
+    <body>
         <div id="header-container">
-            <div id="header-icon-container">
-                <img src="./resources/pics/logo_white.png" alt="icon" id="header-icon-image">
-            </div>
-            <div id="header-option-container">
-                <div id="header-option-div">
-                    <p id="header-option-text" class="button" onclick="goHome()">Acceuil</p>
+            <div id="header-promo-container">
+                <div id="header-promo-background">
+                    <div id="header-promo-color1"></div>
+                    <div id="header-promo-color2"></div>
+                    <div id="header-promo-color3"></div>
+                    <div id="header-promo-color4"></div>
+                    <div id="header-promo-color5"></div>
                 </div>
-                <div id="header-option-div">
-                    <p id="header-option-text" class="button" onclick="goProjects()">Mes projets</p>
-                </div>
-                <div id="header-option-div">
-                    <p id="header-option-text" class="button" onclick="goVideos()">Mes vidéos</p>
-                </div>
-                <div id="header-option-div">
-                    <p id="header-option-text" class="button" onclick="goCommunity()">Communauté</p>
-                </div>
-            </div>
-            <div id="header-connexion-container">
-                <div id="header-connexion-div">
-                    <input type="button" value="se connecter" id="header-connexion-button" class="button" onclick="showConnect()">
+                <div id="header-promo-content">
+                    <div id="header-promo-div">
+                        <h2 id="header-promo-welcome">Bienvenue</h1>
+                        <h1 id="header-promo-pseudo">Paulux</h1>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="content-container">
-
-        </div>
-        <div id="footer-centering">
-            <div id="footer-container">
-                <p id="footer-text">©2020 Paulux</p>
-                <p id="footer-text-min">Tout droits réservés.</p>
-            </div>
-        </div>
-    </div>
-    <div id="connexion-panel-container">
-        <div id="connexion-panel-div">
-            <div id="connect-mode-container">
-                <input type="button" value="S'inscrire" id="connect-mode-button" class="button" onclick="switchConnectMode()">
-            </div>
-            <div id="information-box">
-                <p id="pseudo-text" class="label">Pseudo:</p>
-                <input type="text" id="pseudo-input" class="input">
-                <div id="email-container">
-                    <p id="email-text" class="label">Email:</p>
-                    <input type="text" id="email-input" class="input">
+        <div id="banner-container">
+            <div id="option-banner-div">
+                <div id="option-banner-container">
+                    <div class="option-banner-div"><p class="option-banner-text">Accueil</p></div>
+                    <div class="option-banner-div"><p class="option-banner-text">Projets</p></div>
+                    <div class="option-banner-div"><p class="option-banner-text">Speed Coding</p></div>
                 </div>
-                <p id="password-text" class="label">Mot de passe:</p>
-                <input type="password" id="password-input" class="input">
-                <div id="confirm-container">
-                    <p id="confirm-text" class="label">Confirmation du mot de passe:</p>
-                    <input type="password" id="confirm-input" class="input">
+                <div class="connexion-container">
+                    <div class="connexion-div">
+                        <input id="connexion-button" type="button" value="Se connecter" onclick="">
+                    </div>
                 </div>
             </div>
-            <div id="stay-connected-div">
-                <input type="checkbox" id="stay-connected-box" class="input">
-                <p id="stay-connected-text" class="label">Rester connecté</p>
-            </div>
-            <div id="validation-box">
-                <input type="button" id="cancel-button" class="button" value="Annuler" onclick="hideConnect()">
-                <input type="button" id="validation-button" class="button" value="Valider" onclick="connect()">
-            </div>
-            <div id="connexion-console-container">
-                <p id="connexion-console-text" class="label">Message de console</p>
-            </div>
+            <div id="option-bottom-line"></div>
         </div>
-    </div>
-</body>
+        <p>a</p>
+        <p>z</p>
+        <p>e</p>
+        <p>r</p>
+        <p>t</p>
+        <p>y</p>
+        <p>u</p>
+        <p>a</p>
+        <p>z</p>
+        <p>e</p>
+        <p>r</p>
+        <p>t</p>
+        <p>y</p>
+        <p>u</p>
+        <p>i</p>
+        <p>o</p>
+        <p>p</p>
+        <p>a</p>
+        <p>z</p>
+        <p>e</p>
+        <p>r</p>
+        <p>t</p>
+        <p>y</p>
+        <p>u</p>
+        <p>i</p>
+        <p>o</p>
+        <p>p</p>
+    </body>
 </html>
