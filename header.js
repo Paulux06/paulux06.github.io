@@ -14,8 +14,5 @@ function setupHeader() {
     document.getElementById("header-promo-welcome").style.transform = "translate(0px, 0vh) rotate(0deg) scale(1)";
 
     document.documentElement.style.setProperty("--header-option-scale", "1");
+    document.documentElement.style.setProperty("--header-button-scale", "1");
 }
-
-window.addEventListener("scroll", (event)=> {
-    document.documentElement.style.setProperty("--header-promo-height", Math.max(50 - pageYOffset / 10, 0).toString() + "vh");
-})

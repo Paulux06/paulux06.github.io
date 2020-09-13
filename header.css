@@ -48,6 +48,7 @@ div#header-promo-div {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    transform: translateY(0px);
 }
 
 h1#header-promo-pseudo {
@@ -57,8 +58,11 @@ h1#header-promo-pseudo {
     text-shadow: var(--text-border-shadow);
     font-size: 80px;
     transform: translate(0px, 20vh) rotate(10deg) scale(0);
-    transition: transform var(--animation-length-slow) var(--animation-ease);
-}
+    transition: transform var(--animation-length-slow) var(--animation-ease),
+    color var(--animation-length-quick) var(--animation-ease);
+    user-select: none;
+} h1#header-promo-pseudo:hover {color: var(--color-primary-1);}
+
 h2#header-promo-welcome  {
     color: var(--color-white);
     margin: 0px; padding: 0px;
@@ -67,7 +71,8 @@ h2#header-promo-welcome  {
     font-size: 40px;
     transform: translate(0px, 20vh) rotate(-10deg) scale(0);
     transition: transform var(--animation-length-slow) var(--animation-ease);
-}
+    user-select: none;
+} h2#header-promo-welcome:hover {color: var(--color-primary-5);}
 
 div#banner-container {
     height: max-content;
@@ -96,6 +101,7 @@ div#option-banner-container {
     width: max-content;
     height: var(--header-banner-height);
     float: left;
+    z-index: 10;
 }
 
 .option-banner-div {
@@ -112,14 +118,14 @@ div#option-banner-container {
     margin: 0px 40px; padding: 0px;
     color: var(--color-grey-dark);
     cursor: pointer;
-    transform: translate(0px, 0px) scale(var(--header-option-scale), 1);
+    transform: translate(0px, 0px) scale(var(--header-option-scale));
     transition: transform var(--animation-length-quick) var(--animation-ease),
     border-bottom-width var(--animation-length-quick) var(--animation-ease),
     color var(--animation-length-quick) var(--animation-ease);
     border-bottom: solid 0px;
 }
 .option-banner-text:hover {
-    transform: translate(0px, -2px) scale(var(--header-option-scale), 1);
+    transform: translate(0px, -3px) scale(var(--header-option-scale)) rotate(-2deg);
     color: var(--color-primary-3);
 }
 .option-banner-text:after {
@@ -147,6 +153,23 @@ div#option-banner-container {
     margin: 0px 20px;
 }
 
-.connexion-button {
-
+input#connexion-button {
+    border: solid 2px var(--color-grey-dark);
+    border-radius: 4px;
+    background-color: var(--color-white);
+    font-family: "Roboto bold";
+    font-size: 15px;
+    color: var(--color-grey-dark);
+    box-shadow: 0px 0px 0px #000;
+    transform: translate(0px, 0px) rotate(0deg) scale(var(--header-button-scale));
+    transition: color var(--animation-ease) var(--animation-length-quick),
+    border-color var(--animation-ease) var(--animation-length-quick),
+    transform var(--animation-ease) var(--animation-length-quick),
+    box-shadow var(--animation-ease) var(--animation-length-quick);
+    outline: var(--color-primary-5);
+}
+input#connexion-button:hover {
+    color: var(--color-primary-3);
+    border-color: var(--color-primary-4);
+    transform: translate(0px, -3px) rotate(1deg) scale(var(--header-button-scale));
 }

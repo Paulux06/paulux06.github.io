@@ -5,6 +5,13 @@
         <title>Paulux | Site officiel</title>
         <link rel="stylesheet" href="global.css">
         <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="connexion.css">
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+        <script src="./resources/pik.js"></script>
+        <script src="./firebase.js"></script>
+        <script src="./connexion.js"></script>
         <script src="./header.js"></script>
         <script src="./index.js"></script>
     </head>
@@ -21,7 +28,7 @@
                 <div id="header-promo-content">
                     <div id="header-promo-div">
                         <h2 id="header-promo-welcome">Bienvenue</h1>
-                        <h1 id="header-promo-pseudo">Paulux</h1>
+                        <h1 id="header-promo-pseudo">Anonyme</h1>
                     </div>
                 </div>
             </div>
@@ -35,7 +42,37 @@
                 </div>
                 <div class="connexion-container">
                     <div class="connexion-div">
-                        <input id="connexion-button" type="button" value="Se connecter" onclick="">
+                        <input id="connexion-button" type="button" value="Se connecter" onclick="tooglePanel()">
+                    </div>
+                    <div id="connexion-panel-div">
+                        <div id="connect-mode-container">
+                            <input type="button" value="S'inscrire" id="connect-mode-button" class="button" onclick="switchConnectMode()">
+                        </div>
+                        <div id="information-box">
+                            <p id="pseudo-text" class="label">Pseudo:</p>
+                            <input type="text" id="pseudo-input" class="input">
+                            <div id="email-container">
+                                <p id="email-text" class="label">Email:</p>
+                                <input type="text" id="email-input" class="input">
+                            </div>
+                            <p id="password-text" class="label">Mot de passe:</p>
+                            <input type="password" id="password-input" class="input">
+                            <div id="confirm-container">
+                                <p id="confirm-text" class="label">Confirmation du mot de passe:</p>
+                                <input type="password" id="confirm-input" class="input">
+                            </div>
+                        </div>
+                        <div id="stay-connected-div">
+                            <input type="checkbox" id="stay-connected-box" class="input">
+                            <p id="stay-connected-text" class="label">Rester connecté</p>
+                        </div>
+                        <div id="validation-box">
+                            <input type="button" id="cancel-button" class="button" value="Annuler" onclick="tooglePanel()">
+                            <input type="button" id="validation-button" class="button" value="Valider" onclick="connect()">
+                        </div>
+                        <div id="connexion-console-container">
+                            <p id="connexion-console-text" class="label">Message de console</p>
+                        </div>
                     </div>
                 </div>
             </div>
