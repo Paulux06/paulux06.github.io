@@ -13,7 +13,8 @@ function connexionSetup()
     document.getElementById("confirm-container").style.height = "0px";
     document.getElementById("email-container").style.height = "0px";
     document.getElementById("connexion-console-container").style.height = "0px";
-
+    document.getElementById("connexion-panel-div").style.transform = "translate(45%, -55%) scale(0, 0)";
+    setTimeout(()=>{document.getElementById("connexion-panel-div").style.opacity = "1";}, 500);
     if (isClientSaved())
     {
         setClientName("Connexion ...")
@@ -49,9 +50,10 @@ function saveClientStore()
 }
 function isClientSaved() {return localStorage.getItem("client_pseudo") != null}
 
-function showMessage(message="message console")
+function showMessage(message="message console", color="var(--color-black)")
 {
     document.getElementById("connexion-console-text").innerHTML = message;
+    document.getElementById("connexion-console-text").style.color = color;
     document.getElementById("connexion-console-container").style.height = consoleDIVheight;
     setTimeout(() => {
         document.getElementById("connexion-console-container").style.height = "0px";
@@ -120,7 +122,9 @@ function setClientName(name="Se connecter")
 
 function connect()
 {
+    document.getElementById("validation-button").value = "...";
     database.ref().child("accounts").once('value').then((info) => {
+        document.getElementById("validation-button").value = "Valider";
         var data = JSON.parse(JSON.stringify(info));
         if (data == null) 
         {
@@ -163,7 +167,7 @@ function connect()
                     inscrit = true;
                     if (getEncrypted(password_input, parseInt(key)) == data[key]["password"])
                     {
-                        showMessage("Connexion réussie, bienvenue "+data[key]["pseudo"]+".");
+                        showMessage("Connexion réussie.");
                         clearInputs();
                         client = {
                             pseudo: data[key]["pseudo"],
@@ -258,7 +262,7 @@ function connect()
                     var Accounts = JSON.parse(JSON.stringify(data));
                     Accounts[accountIndex] = newAccount;
                     database.ref().child("accounts").set(Accounts);
-                    showMessage("Compte créé, bienvenue "+pseudo_input+".");
+                    showMessage("Compte créé.");
                     console.log("created with key "+key);
                     client = {
                         pseudo: pseudo_input,
@@ -281,7 +285,7 @@ function connect()
         setTimeout(() => {
             panel_state = true;
             tooglePanel();
-        }, 1000);
+        }, 1800);
         return true;
     });
 }

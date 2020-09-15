@@ -104,6 +104,12 @@ div#option-banner-container {
     z-index: 10;
 }
 
+img#header-icon {
+    filter: brightness(50%) sepia(100) saturate(100) hue-rotate(200deg);
+    width: var(--header-banner-height);
+    height: var(--header-banner-height);
+}
+
 .option-banner-div {
     width: max-content;
     height: inherit;
@@ -151,25 +157,4 @@ div#option-banner-container {
 .connexion-div {
     width: min-content;
     margin: 0px 20px;
-}
-
-input#connexion-button {
-    border: solid 2px var(--color-grey-dark);
-    border-radius: 4px;
-    background-color: var(--color-white);
-    font-family: "Roboto bold";
-    font-size: 15px;
-    color: var(--color-grey-dark);
-    box-shadow: 0px 0px 0px #000;
-    transform: translate(0px, 0px) rotate(0deg) scale(var(--header-button-scale));
-    transition: color var(--animation-ease) var(--animation-length-quick),
-    border-color var(--animation-ease) var(--animation-length-quick),
-    transform var(--animation-ease) var(--animation-length-quick),
-    box-shadow var(--animation-ease) var(--animation-length-quick);
-    outline: var(--color-primary-5);
-}
-input#connexion-button:hover {
-    color: var(--color-primary-3);
-    border-color: var(--color-primary-4);
-    transform: translate(0px, -3px) rotate(1deg) scale(var(--header-button-scale));
 }

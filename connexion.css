@@ -1,18 +1,87 @@
 div#connexion-panel-div {
     background-color: var(--color-white);
     border-radius: 10px;
-    padding: 10px;
+    padding: 16px;
     box-shadow: var(--shadow-strong);
-    height: max-content;
-    width: max-content;
+    height: fit-content;
+    width: fit-content;
     position: absolute;
     right: 20px;
     top: 42px;
     border: solid 2px var(--color-grey-light);
-    transform: translate(45%, -55%) scale(0, 0);
+    transform: translate(45%, -55%) scale(1, 1);
+    opacity: 0;
     transition: transform var(--animation-length-quick) var(--animation-ease);
 }
 
 div#connexion-console-container {
     overflow: hidden;
+    transition: height var(--animation-length-quick) var(--animation-ease);
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+}
+
+p#connexion-console-text {
+    font-family: "Roboto medium";
+    color: var(--color-black);
+    height: 20px;
+    margin: 2px 0px;
+    transition: color var(--animation-length-quick) var(--animation-ease);
+}
+
+div#stay-connected-div {
+    display: inline-flex;
+}
+
+div#connect-mode-container {
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p#stay-connected-text {
+    transform: translateY(-6%);
+}
+
+div#email-container, div#confirm-container {
+    transition: height var(--animation-length-quick) var(--animation-ease);
+    overflow: hidden;
+}
+
+.label {
+    font-family: "Roboto medium";
+    color: var(--color-black);
+    margin: 0px 2px;
+}
+
+.input {
+    border: solid var(--border-width) var(--color-black);
+    border-radius: var(--border-radius);
+    font-family: "Roboto medium";
+    color: var(--color-black);
+    margin: 0px; margin-bottom: 20px;
+    transition: border-color var(--animation-length-quick) var(--animation-ease);
+} .input:hover {border-color: var(--color-primary-3);}
+
+.button {
+    border: solid var(--border-width) var(--color-grey-dark);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    font-family: "Roboto bold";
+    font-size: 15px;
+    color: var(--color-grey-dark);
+    box-shadow: 0px 0px 0px #000;
+    transform: translate(0px, 0px) rotate(0deg) scale(var(--header-button-scale));
+    transition: color var(--animation-ease) var(--animation-length-quick),
+    border-color var(--animation-ease) var(--animation-length-quick),
+    transform var(--animation-ease) var(--animation-length-quick),
+    box-shadow var(--animation-ease) var(--animation-length-quick);
+    outline: var(--color-primary-5);
+}
+.button:hover {
+    color: var(--color-primary-3);
+    border-color: var(--color-primary-4);
+    transform: translate(0px, -3px) rotate(1deg) scale(var(--header-button-scale));
 }

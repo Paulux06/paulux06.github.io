@@ -5,7 +5,7 @@ function setupHeader() {
     }, 100);
     setTimeout(()=>{
         title.style.transform = "translate(0px, 0vh) rotate(0deg) scale(1)";
-    }, 1000);
+    }, 1200);
     document.getElementById("header-promo-color1").style.width = "20vw";
     document.getElementById("header-promo-color2").style.width = "20vw";
     document.getElementById("header-promo-color3").style.width = "20vw";

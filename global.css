@@ -10,6 +10,7 @@
     --color-white: #FFFFFF;
     --color-black: #000000;
     --gradient-primary: linear-gradient(0deg, var(--color-primary-1, var(--color-primary-5)));
+    --color-brightness: 0.25;
 
     --text-border-shadow: 0px 0px 30px rgba(0,0,0,.6),
     3px 0 0 #404040, -3px 0 0 #404040, 0 3px 0 #404040, 0 -3px 0 #404040,
@@ -23,10 +24,13 @@
     --animation-length-slow: 1000ms;
     --animation-ease: cubic-bezier(.5,0,0,1);
 
-    --header-promo-height: 50vh;
+    --header-promo-height: 45vh;
     --header-option-scale: 0;
     --header-button-scale: 0;
     --header-banner-height: 50px;
+    
+    --border-radius: 4px;
+    --border-width: 2px;
 }
 
 @font-face {
