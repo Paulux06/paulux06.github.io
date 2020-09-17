@@ -1,0 +1,106 @@
+@keyframes quote-in {
+    0% {transform: translateY(-20px) rotateX(90deg) scale(0.5);}
+    100% {transform: translateY(0px) rotate(0deg) scale(1);}
+}
+@keyframes languages-in {
+    0% {width: 0%;}
+    100% {width: 25%;}
+}
+
+div#quote-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1#quote-text {
+    font-family: "Roboto bold";
+    font-size: 55px;
+    letter-spacing: 0px;
+    background: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: solid 4px;
+    border-image: var(--color-gradient);
+    border-image-slice: 1;
+    width: fit-content;
+    margin-bottom: 0px;
+    animation: quote-in var(--animation-length-slow) var(--animation-ease);
+    transition: transform var(--animation-length-normal) var(--animation-ease),
+    letter-spacing var(--animation-length-normal) var(--animation-ease);
+    user-select: none;
+} h1#quote-text:hover {transform: translateY(-4px) scale(1.02); letter-spacing: 3px;}
+
+div#languages-centering {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+div#languages-borders {
+    width: 80vw;
+    padding: 4px;
+	height: max-content;
+    background: var(--color-gradient);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow-strong);
+    transform-origin: 50% 0%;
+    transform: scale(0, 0);
+    transition: transform var(--animation-length-normal) var(--animation-ease);
+}
+div#languages-container {
+    width: 80vw;
+	height: max-content;
+    background: var(--color-gradient);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 17px;
+}
+div#languages-space {
+    width: 4px; height: 10px;
+}
+div.language-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    width: 25%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-size: 106vh 60vh;
+    transition: width var(--animation-length-normal) var(--animation-ease);
+    animation: languages-in var(--animation-length-normal) var(--animation-ease);
+}
+h2.language-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Roboto bold";
+    font-size: 30px;
+    color: var(--color-white);
+    text-shadow: var(--text-border-shadow);
+    padding-top: 10px; padding-bottom: 10px;
+    backdrop-filter: blur(6px) brightness(1.2);
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    border-image: var(--color-gradient);
+    border-image-slice: 1;
+    user-select: none;
+}
+
+div#languages-container:hover div.language-container {
+    width:20%;
+}
+div#languages-container:hover div.language-container:hover {
+    width:60%;
+}

@@ -81,6 +81,7 @@ div#banner-container {
     top: 0px;
     box-shadow: var(--shadow);
     background-color: var(--color-white);
+    z-index: 10;
 }
 
 div#option-banner-div {
@@ -105,9 +106,12 @@ div#option-banner-container {
 }
 
 img#header-icon {
-    filter: brightness(50%) sepia(100) saturate(100) hue-rotate(200deg);
+    filter: brightness(var(--color-brightness));
     width: var(--header-banner-height);
     height: var(--header-banner-height);
+    user-select: none;
+    transform: translate(0px, 0px) rotate(-45deg) scale(0);
+    transition: transform var(--animation-length-slow) var(--animation-ease);
 }
 
 .option-banner-div {
@@ -128,6 +132,7 @@ img#header-icon {
     transition: transform var(--animation-length-quick) var(--animation-ease),
     border-bottom-width var(--animation-length-quick) var(--animation-ease),
     color var(--animation-length-quick) var(--animation-ease);
+    animation: headerOptionIn var(--animation-length-normal) var(--animation-ease);
     border-bottom: solid 0px;
 }
 .option-banner-text:hover {

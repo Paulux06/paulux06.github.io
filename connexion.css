@@ -2,7 +2,7 @@ div#connexion-panel-div {
     background-color: var(--color-white);
     border-radius: 10px;
     padding: 16px;
-    box-shadow: var(--shadow-strong);
+    box-shadow: var(--shadow);
     height: fit-content;
     width: fit-content;
     position: absolute;

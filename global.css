@@ -9,7 +9,7 @@
     --color-grey-dark: #404040;
     --color-white: #FFFFFF;
     --color-black: #000000;
-    --gradient-primary: linear-gradient(0deg, var(--color-primary-1, var(--color-primary-5)));
+    --color-gradient: linear-gradient(90deg, var(--color-primary-1), var(--color-primary-5));
     --color-brightness: 0.25;
 
     --text-border-shadow: 0px 0px 30px rgba(0,0,0,.6),
@@ -46,8 +46,18 @@
     src: url("./resources/fonts/Roboto/Roboto-Light.ttf");
 }
 
+@keyframes headerOptionIn {
+    0% {
+        transform: translate(-80px, 0px) rotate(-45deg) scale(0);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+    }
+}
+
 body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    margin-bottom: 100px;
 }
