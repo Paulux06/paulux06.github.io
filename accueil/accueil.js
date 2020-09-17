@@ -23,17 +23,21 @@ function loadAccueil() {
 
     for (let i = 0; i < languages.length; i++) {
         setTimeout(() => {
-            var language_container = document.createElement("div");
-            var language_text = document.createElement("h2");
-            language_text.classList.add("language-text");
-            language_text.innerHTML = languages[i].title;
-            language_container.classList.add("language-container");
-            language_container.style.backgroundImage = "url("+languages[i].img+")";
-            language_container.appendChild(language_text);
-            var space = document.createElement("div"); space.id = "languages-space";
-            if (i > 0) languages_container.appendChild(space);
-            languages_container.appendChild(language_container);
-        }, i*200+800);
+            var pic = new Image();
+            pic.onload = ()=>{
+                var language_container = document.createElement("div");
+                var language_text = document.createElement("h2");
+                language_text.classList.add("language-text");
+                language_text.innerHTML = languages[i].title;
+                language_container.classList.add("language-container");
+                language_container.style.backgroundImage = "url("+languages[i].img+")";
+                language_container.appendChild(language_text);
+                var space = document.createElement("div"); space.id = "languages-space";
+                if (i > 0) languages_container.appendChild(space);
+                languages_container.appendChild(language_container);
+            }
+            pic.src = languages[i].img;
+        }, i*200+500);
     }
     languages_borders.appendChild(languages_container);
     languages_centering.appendChild(languages_borders);
