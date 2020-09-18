@@ -12,7 +12,7 @@ window.onload = () => {
     ANIMATION_LENGTH_SLOW = parseInt(computedStyle.getPropertyValue("--animation-length-slow"));
     connexionSetup();
     setupHeader();
-    setTimeout(loadAccueil, 1500);
+    setTimeout(loadAccueil, 00);
 }
 
 function clearContent() {

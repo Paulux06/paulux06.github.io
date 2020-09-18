@@ -1,3 +1,17 @@
+@keyframes welcome-text-in {
+    0% {transform: translate(0px, 20vh) rotate(-10deg) scale(0);}
+    100% {transform: translate(0px, 0px) rotate(0deg) scale(1);}
+}
+@keyframes pseudo-text-in {
+    0% {transform: translate(0px, 20vh) rotate(10deg) scale(0)}
+    50% {transform: translate(0px, 0px) rotate(0deg) scale(0.8)}
+    100% {transform: translate(0px, 0px) rotate(0deg) scale(1);}
+}
+@keyframes header-icon-in {
+    0% {transform: translate(0px, 0px) rotate(-45deg) scale(0);}
+    100% {transform: translate(0px, 0px) rotate(0deg) scale(1);}
+}
+
 div#header-container {
     width: 100vw;
     height: var(--header-promo-height);
@@ -57,11 +71,15 @@ h1#header-promo-pseudo {
     font-family: "Roboto bold";
     text-shadow: var(--text-border-shadow);
     font-size: 80px;
-    transform: translate(0px, 20vh) rotate(10deg) scale(0);
-    transition: transform var(--animation-length-slow) var(--animation-ease),
+    transition: transform var(--animation-length-quick) var(--animation-ease),
     color var(--animation-length-quick) var(--animation-ease);
+    animation: pseudo-text-in var(--animation-length-slow) var(--animation-ease);
     user-select: none;
-} h1#header-promo-pseudo:hover {color: var(--color-primary-1);}
+    z-index: 12;
+} h1#header-promo-pseudo:hover {
+    color: var(--color-primary-5);
+    transform: translate(0px, 0px) rotate(0deg) scale(1.1);
+}
 
 h2#header-promo-welcome  {
     color: var(--color-white);
@@ -69,10 +87,14 @@ h2#header-promo-welcome  {
     font-family: "Roboto bold";
     text-shadow: var(--text-border-shadow);
     font-size: 40px;
-    transform: translate(0px, 20vh) rotate(-10deg) scale(0);
-    transition: transform var(--animation-length-slow) var(--animation-ease);
+    transition: transform var(--animation-length-quick) var(--animation-ease);
+    animation: welcome-text-in var(--animation-length-slow) var(--animation-ease);
     user-select: none;
-} h2#header-promo-welcome:hover {color: var(--color-primary-5);}
+    z-index: 12;
+} h2#header-promo-welcome:hover {
+    color: var(--color-primary-5);
+    transform: translate(0px, 0px) rotate(0deg) scale(1.1);
+}
 
 div#banner-container {
     height: max-content;
@@ -110,8 +132,10 @@ img#header-icon {
     width: var(--header-banner-height);
     height: var(--header-banner-height);
     user-select: none;
-    transform: translate(0px, 0px) rotate(-45deg) scale(0);
-    transition: transform var(--animation-length-slow) var(--animation-ease);
+    transition: transform var(--animation-length-normal) var(--animation-ease);
+    animation: header-icon-in var(--animation-length-slow) var(--animation-ease);
+} img#header-icon:hover {
+    transform: translate(0px, 0px) rotate(0deg) scale(1.1);
 }
 
 .option-banner-div {
