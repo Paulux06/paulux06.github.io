@@ -65,7 +65,7 @@ function loadAccueil() {
         quote_text.id = "quote-text"; quote_text.innerHTML = "Mes projets"
         quote_container.appendChild(quote_text);
         MAIN_PAGE_CONTAINER.appendChild(quote_container);
-    }, 00);
+    }, 1200);
 
     /********************************************
     *                                           *
@@ -127,5 +127,5 @@ function loadAccueil() {
         project_centerer.appendChild(project_border);
         MAIN_PAGE_CONTAINER.appendChild(project_centerer);
         setTimeout(() => {project_border.style.transform = "scale(1, 1)";}, 200);
-    }, 100);
+    }, 1300);
 }
