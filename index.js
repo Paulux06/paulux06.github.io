@@ -3,6 +3,7 @@ var MAIN_PAGE_CONTAINER = document.createElement("div");
 var ANIMATION_LENGTH_QUICK = 0;
 var ANIMATION_LENGTH_NORMAL = 0;
 var ANIMATION_LENGTH_SLOW = 0;
+var loadingBusy = false;
 
 window.onload = () => {
     computedStyle = getComputedStyle(document.documentElement);
@@ -12,7 +13,7 @@ window.onload = () => {
     ANIMATION_LENGTH_SLOW = parseInt(computedStyle.getPropertyValue("--animation-length-slow"));
     connexionSetup();
     setupHeader();
-    setTimeout(loadAccueil, 00);
+    setTimeout(loadAccueil, 500);
 }
 
 function clearContent() {

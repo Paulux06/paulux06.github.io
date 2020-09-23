@@ -1,0 +1,325 @@
+@keyframes quote-in {
+    0% {transform: translateY(-20px) rotateX(90deg) scale(0.5);}
+    100% {transform: translateY(0px) rotate(0deg) scale(1);}
+}
+@keyframes languages-in {
+    0% {width: 0%;}
+    100% {width: 25%;}
+}
+@keyframes project-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+@keyframes enrol-in {
+    0% {width: 0%;}
+    100% {width: 20%;}
+}
+
+/********************************************
+*                                           *
+*                   QUOTE                   *
+*                                           *
+********************************************/
+div.title-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1.title-text {
+    font-family: "Roboto bold";
+    font-size: 55px;
+    letter-spacing: 0px;
+    background: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: solid 4px;
+    border-image: var(--color-gradient);
+    border-image-slice: 1;
+    width: fit-content;
+    margin-bottom: 0px;
+    animation: quote-in var(--animation-length-slow) var(--animation-ease);
+    transition: transform var(--animation-length-normal) var(--animation-ease),
+    letter-spacing var(--animation-length-normal) var(--animation-ease);
+    user-select: none;
+} h1.title-text:hover {transform: translateY(-4px) scale(1.02); letter-spacing: 3px;}
+
+/********************************************
+*                                           *
+*               INLINE CHOICE               *
+*                                           *
+********************************************/
+div.inlines-centering {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0px;
+}
+div.inlines-borders {
+    width: 80vw;
+    padding: 4px;
+	height: max-content;
+    background: var(--color-gradient);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow-strong);
+    transform-origin: 50% 0%;
+    transform: scale(0, 0);
+    transition: transform var(--animation-length-normal) var(--animation-ease);
+}
+div.inlines-container {
+    width: 80vw;
+	height: max-content;
+    background: var(--color-gradient);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 17px;
+}
+div.inlines-space {
+    width: 4px; height: 10px;
+}
+div.inline-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    width: 25%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-size: 106vh 60vh;
+    transition: width var(--animation-length-normal) var(--animation-ease);
+    animation: languages-in var(--animation-length-normal) var(--animation-ease);
+}
+h2.inline-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Roboto bold";
+    font-size: 30px;
+    color: var(--color-white);
+    text-shadow: var(--text-border-shadow);
+    padding-top: 10px; padding-bottom: 10px;
+    backdrop-filter: blur(6px) brightness(1.2);
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    border-image: var(--color-gradient);
+    border-image-slice: 1;
+    user-select: none;
+}
+
+div.inlines-container:hover div.inline-container:hover {
+    width:60%;
+}
+
+/********************************************
+*                                           *
+*                QUAD CHOICE                *
+*                                           *
+********************************************/
+div.quad-centerer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0px;
+}
+div.quad-borders {
+    width: 60vw;
+    height: 35vw;
+    padding: 4px;
+    background: var(--color-gradient);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow-strong);
+    transform-origin: 50% 0%;
+    transform: scale(0, 0);
+    transition: transform var(--animation-length-normal) var(--animation-ease);
+}
+div.quad-container {
+    width: 100%;
+	height: 100%;
+    background: var(--color-gradient);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 17px;
+}
+div.quad-left, div.quad-right {
+    width: 50%;
+    height: 100%;
+    display: block;
+}
+div.quad-separator {
+    width: 4px;
+    height: 4px;
+}
+div.quad-l-top, div.quad-r-top, div.quad-l-bottom, div.quad-r-bottom {
+    background-color: var(--color-white);
+    width: 100%;
+    height: 50%;
+    z-index: 4;
+    transform: scale(1);
+    transition: transform var(--animation-length-quick) var(--animation-ease);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: url("./resources/accueil/javascript.png");
+    background-size: 640px 360px;
+    animation: project-in var(--animation-length-normal) var(--animation-ease);
+}
+div.quad-l-top:hover, div.quad-r-top:hover,
+div.quad-l-bottom:hover, div.quad-r-bottom:hover {
+    transform: scale(0.95);
+}
+h2.quad-l-top-text, h2.quad-r-top-text,
+h2.quad-l-bottom-text, h2.quad-r-bottom-text {
+    font-size: 30px;
+    font-family: "Roboto bold";
+    color: var(--color-white);
+    backdrop-filter: blur(5px);
+    padding: 14px 0px;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    border-image: var(--color-gradient);
+    border-image-slice: 1;
+    user-select: none;
+}
+
+
+/********************************************
+*                                           *
+*                REDIRECTION                *
+*                                           *
+********************************************/
+h3.redirect {
+    background: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: "Roboto bold";
+    font-size: 18px;
+    letter-spacing: 0px;
+    width: fit-content;
+    margin-top: 30px;
+    animation: quote-in var(--animation-length-slow) var(--animation-ease);
+    transition: transform var(--animation-length-normal) var(--animation-ease),
+    letter-spacing var(--animation-length-normal) var(--animation-ease);
+    user-select: none;
+    cursor: pointer;
+}
+h3.redirect::after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px;
+    border-image: var(--color-gradient);
+    border-image-slice: 1;
+    transform: scaleX(0);  
+    transition: transform var(--animation-length-quick) var(--animation-ease);
+}
+h3.redirect:hover::after {
+    transform: scaleX(1);
+}
+h3.redirect:hover {
+    transform: translateY(-4px) scale(1.01); letter-spacing: 1px;
+}
+
+/********************************************
+*                                           *
+*              PROJECT CHOICE               *
+*                                           *
+********************************************/
+div.enrols-centering {
+    width: 100%;
+    height: fit-content;
+    min-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0px;
+}
+div.enrols-container {
+    width: 80%;
+	height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 17px;
+}
+div.enrols-borders {
+    width: 20%;
+    padding: 4px;
+    height: max-content;
+    background: var(--color-gradient);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow-strong);
+    animation: enrol-in var(--animation-length-normal) var(--animation-ease);
+}
+div.enrols-space {
+    width: 4px; height: 10px;
+}
+div.enrol-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    height: max-content;
+    width: 100%;
+    height: 6vh;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 17px;
+    transition: height var(--animation-length-normal) var(--animation-ease);
+}
+div.enrol-text-container {
+    background-color: white;
+    opacity: 1;
+    height: max-content;
+    overflow: hidden;
+    white-space: nowrap;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: scale(1);
+    border-radius: 17px;
+    transition: opacity var(--animation-length-quick) var(--animation-ease),
+                transform var(--animation-length-quick) var(--animation-ease);
+}
+h2.enrol-text {
+    font-family: "Roboto bold";
+    font-size: 4vh;
+    background: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 5px auto;
+    user-select: none;
+}
+
+div.enrols-container:hover div.enrol-container:hover {
+    height: 40vh;
+}
+div.enrols-container:hover div.enrol-container:hover > div.enrol-text-container {
+    opacity: 0; transform: scale(0.5);
+}

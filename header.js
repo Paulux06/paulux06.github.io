@@ -1,6 +1,6 @@
 var headerOptions = [
     {title: "Accueil", onclick: ()=>{loadAccueil();}},
-    {title: "Projets", onclick: ()=>{loadAccueil();}},
+    {title: "Projets", onclick: ()=>{loadProjects();}},
     {title: "Vidéos" , onclick: ()=>{loadAccueil();}}
 ]
 
