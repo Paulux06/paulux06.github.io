@@ -1,7 +1,8 @@
 var headerOptions = [
     {title: "Accueil", onclick: ()=>{loadAccueil();}},
     {title: "Projets", onclick: ()=>{loadProjects();}},
-    {title: "Vidéos" , onclick: ()=>{loadAccueil();}}
+    {title: "Vidéos" , onclick: ()=>{loadVideos();}},
+    {title: "Chat" , onclick: ()=>{loadChat();}}
 ]
 
 function setupHeader() {

@@ -3,6 +3,7 @@ var MAIN_PAGE_CONTAINER = document.createElement("div");
 var ANIMATION_LENGTH_QUICK = 0;
 var ANIMATION_LENGTH_NORMAL = 0;
 var ANIMATION_LENGTH_SLOW = 0;
+var CURRENT_SECTION = "";
 var loadingBusy = false;
 
 window.onload = () => {

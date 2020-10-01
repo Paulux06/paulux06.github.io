@@ -1,5 +1,6 @@
 function loadAccueil() {
     if (loadingBusy) return;
+    CURRENT_SECTION = "acceuil";
     loadingBusy = true;
     clearContent();
 

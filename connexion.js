@@ -2,6 +2,7 @@ var connectMode = true;
 var confirmDIVheight = "0px";
 var emailDIVheight = "0px";
 var consoleDIVheight = "0px";
+var serverAccounts = [];
 
 var client = {pseudo: "", password: "", email: "", index: 0};
 
@@ -138,6 +139,11 @@ function connect()
         var password_input = document.getElementById("password-input").value;
         var stay_connected = document.getElementById("stay-connected-box").checked;
 
+        serverAccounts = []                
+        for (let i = 0; i < keys.length; i++) {
+            serverAccounts.push({pseudo: data[keys[i]]["pseudo"], index: keys[i]})
+        }
+
         if (client.pseudo != "")
         {
             pseudo_input = client.pseudo;
@@ -258,12 +264,10 @@ function connect()
                         "password": getEncrypted(password_input, key),
                         "email": email_input
                     };
-                    console.log(password_input+" made "+newAccount.password);
                     var Accounts = JSON.parse(JSON.stringify(data));
                     Accounts[accountIndex] = newAccount;
                     database.ref().child("accounts").set(Accounts);
                     showMessage("Compte créé.");
-                    console.log("created with key "+key);
                     client = {
                         pseudo: pseudo_input,
                         email: email_input,
