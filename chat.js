@@ -35,7 +35,6 @@ function loadChat() {
     var textinput = document.createElement("input");
     var buttonInput = document.createElement("input");
     var chatDiv = document.createElement("div");
-    var chatEnvelop = document.createElement("div");
 
     chatCentering.classList.add("chat-centering")
     chatContainer.classList.add("chat-container");
@@ -183,16 +182,13 @@ function sendMessage(chatbox) {
 function getDate(time) {
     var d = new Date(1970, 0, 1);
     d.setSeconds(time+7200);
-    var date = d.toString()
+    var cur = new Date();
+    /*var date = d.toString();
     for (let i = 0; i < date.length; i++) {
         if (date[i] == ":") {
-            return date.substring(i-2, i+3)
+            return date.substring(i-2, i+3);
         }
-    }
+    }*/
+    if (cur.getTime()-d.getTime())
     return "";
 }
-
-window.addEventListener("keydown", (ev)=>{
-    if (ev.key == "Enter" && CURRENT_SECTION == "chat")
-        sendMessage(document.getElementById("chat-box"));
-})

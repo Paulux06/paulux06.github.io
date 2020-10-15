@@ -3,6 +3,7 @@ var confirmDIVheight = "0px";
 var emailDIVheight = "0px";
 var consoleDIVheight = "0px";
 var serverAccounts = [];
+var panel_state = false;
 
 var client = {pseudo: "", password: "", email: "", index: 0};
 
@@ -60,7 +61,7 @@ function showMessage(message="message console", color="var(--color-black)")
         document.getElementById("connexion-console-container").style.height = "0px";
     }, 1500);
 }
-var panel_state = false;
+
 function tooglePanel()
 {
     var container = document.getElementById("connexion-panel-div");
