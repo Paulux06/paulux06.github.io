@@ -113,17 +113,39 @@ function loadAccueil() {
         project_l_bottom_text.innerHTML = "Processors";
         project_r_top_text.innerHTML = "Robot";
         project_r_bottom_text.innerHTML = "Site web";
+        var pic1 = new Image(); pic1.src = "./resources/accueil/cpp.png";
+        var pic2 = new Image(); pic2.src = "./resources/accueil/java.png";
+        var pic3 = new Image(); pic3.src = "./resources/accueil/javascript.png";
+        var pic4 = new Image(); pic4.src = "./resources/accueil/python.png";
 
         project_l_bottom.appendChild(project_l_bottom_text);
         project_l_top.appendChild(project_l_top_text);
         project_r_top.appendChild(project_r_top_text);
         project_r_bottom.appendChild(project_r_bottom_text);
-        setTimeout(()=>{project_left.appendChild(project_l_top);}, 500);
-        setTimeout(()=>{project_left.appendChild(project_separator);}, 612)
-        setTimeout(()=>{project_left.appendChild(project_l_bottom);}, 750);
-        setTimeout(()=>{project_right.appendChild(project_r_top);}, 1000);
-        setTimeout(()=>{project_right.appendChild(project_separator2);}, 1125)
-        setTimeout(()=>{project_right.appendChild(project_r_bottom); loadingBusy = false;}, 1250);
+        pic1.onload = ()=>{
+            project_l_top.style.backgroundImage = pic1;
+            project_left.appendChild(project_l_top);
+            project_left.appendChild(project_separator);
+        }
+        pic2.onload = ()=>{
+            setTimeout(() => {
+                project_l_top.style.backgroundImage = pic2;
+                project_left.appendChild(project_l_bottom);
+            }, 200);
+        }
+        pic3.onload = ()=>{
+            setTimeout(() => {
+                project_l_top.style.backgroundImage = pic3;
+                project_right.appendChild(project_r_top);
+                project_right.appendChild(project_separator2);
+            }, 400);
+        }
+        pic4.onload = ()=>{
+            setTimeout(() => {
+                project_l_top.style.backgroundImage = pic4;
+                project_right.appendChild(project_r_bottom);
+            }, 600);
+        }
         project_container.appendChild(project_left);
         project_container.appendChild(project_separator3);
         project_container.appendChild(project_right);
@@ -131,5 +153,6 @@ function loadAccueil() {
         project_centerer.appendChild(project_border);
         MAIN_PAGE_CONTAINER.appendChild(project_centerer);
         setTimeout(() => {project_border.style.transform = "scale(1, 1)";}, 100);
+        loadingBusy = false;
     }, 750);
 }
