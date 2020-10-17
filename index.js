@@ -5,25 +5,33 @@ var ANIMATION_LENGTH_NORMAL = 0;
 var ANIMATION_LENGTH_SLOW = 0;
 var CURRENT_SECTION = "";
 var loadingBusy = false;
+var loadingStart = 0;
 
 window.onload = () => {
     connexionSetup();
+    loadingStart = new Date().getTime() / 1000;
     waitUntilSigned();
 }
 
 function waitUntilSigned() {
     var displayName = document.getElementById("header-promo-pseudo")
+    var timedout = new Date().getTime() / 1000 - loadingStart > 3;
     if (displayName.innerHTML == "Anonyme" && client.pseudo != "") {
-        document.getElementById("main-loading-info").innerHTML = "Connexion à votre compte ..."
+        if (timedout) {
+            document.getElementById("main-loading-info").innerHTML = "Délai dépassé.";
+            displayPage();
+            return;
+        }
+        document.getElementById("main-loading-info").innerHTML = "Connexion à votre compte ...";
         setTimeout(waitUntilSigned, 250);
         return;
     }
     displayPage();
+    return;
 }
 
 function displayPage() {
     setTimeout(removeLoading, 0);
-    console.log("loaded");
     computedStyle = getComputedStyle(document.documentElement);
     MAIN_PAGE_CONTAINER = document.getElementById("main-page-container");
     ANIMATION_LENGTH_QUICK = parseInt(computedStyle.getPropertyValue("--animation-length-quick"));
@@ -40,16 +48,16 @@ function clearContent() {
 }
 
 window.addEventListener("keydown", (ev)=>{
-    if (ev.key == "Enter")
-        if (panel_state) connect();
+    if (ev.key == "Enter") {
+        if (panel_state) connect();    
         switch(CURRENT_SECTION) {
             case "chat":
                 sendMessage(document.getElementById("chat-box"));
                 break;
-
             default:
                 break;
         }
+    }
 })
 
 function removeLoading() {

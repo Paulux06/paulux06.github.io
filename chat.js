@@ -109,7 +109,6 @@ function updateChat(chatbox) {
         for (let i = 0; i < messages.length; i++) {
             messages[i].time = getDate(messages[i].time);
         }
-
         //display the new chat
         drawChat(chatbox, messages);
     })
@@ -180,15 +179,22 @@ function sendMessage(chatbox) {
 }
 
 function getDate(time) {
+    const DAYLONG = 24 * 60 * 60
     var d = new Date(1970, 0, 1);
     d.setSeconds(time+7200);
     var cur = new Date();
-    /*var date = d.toString();
-    for (let i = 0; i < date.length; i++) {
-        if (date[i] == ":") {
-            return date.substring(i-2, i+3);
+    if (cur.getTime()-d.getTime() < DAYLONG) {
+        var date = d.toString();
+        for (let i = 0; i < date.length; i++) {
+            if (date[i] == ":") {
+                return date.substring(i-2, i+3);
+            }
         }
-    }*/
-    if (cur.getTime()-d.getTime())
-    return "";
+    } else {
+        var dd = d.getDate();
+        var mm = d.getMonth();
+        if (dd < 10) dd = '0'+ dd;
+        if (mm < 10) mm = '0' + mm;
+        return dd+"/"+mm;
+    }
 }

@@ -24,7 +24,6 @@
     --animation-length-slow: 1000ms;
     --animation-ease: cubic-bezier(.5,0,0,1);
 
-    --header-promo-height: 45vh;
     --header-option-scale: 0;
     --header-button-scale: 0;
     --header-banner-height: 50px;
@@ -85,13 +84,19 @@ div#main-loading-container {
     transition: opacity var(--animation-length-slow) var(--animation-ease);
 }
 
+div#main-page-container {
+    z-index: 2;
+    background-color: var(--color-white);
+    min-height: 20vh;
+}
+
 img#main-loading-logo {
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     animation: logo-rotate var(--animation-length-slow) var(--animation-ease) infinite;
-    height: 8vw;
+    height: 5vw;
     filter: brightness(0.1);
     transition: transform var(--animation-length-slow) var(--animation-ease);
 }

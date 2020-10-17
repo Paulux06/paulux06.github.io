@@ -14,32 +14,36 @@
 
 div#header-container {
     width: 100vw;
-    height: var(--header-promo-height);
+    min-height: min-content;
+    height: max-content;
     display: block;
 }
 
 div#header-promo-container {
-    height: max-content;
+    height: fit-content;
     width: 100vw;
+    overflow: hidden;
 }
 
 div#header-promo-background {
     width: 100vw;
-    height: var(--header-promo-height);
+    height: 50vh;
     position: absolute;
-    top: 0px; left: 0px;
+    top: 0; left: 0;
     display: flex;
     background: linear-gradient(90deg, var(--color-primary-1), var(--color-primary-5));
     overflow: hidden;
+    z-index: -1;
 }
 
 div#header-promo-color1, div#header-promo-color2, div#header-promo-color3, div#header-promo-color4, div#header-promo-color5 {
     width: 0vw; height: 75vh;
     margin: 0px; padding: 0px;
     background-color: var(--color-primary-1);
-    transform: rotate(20deg) translate(-5vh, -10vh);
+    transform: rotate(15deg) translate(-5vh, -10vh);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
     transition: width var(--animation-length-slow) var(--animation-ease);
+    z-index: -1;
 }
 div#header-promo-color2 {background-color: var(--color-primary-2);}
 div#header-promo-color3 {background-color: var(--color-primary-3);}
@@ -47,17 +51,16 @@ div#header-promo-color4 {background-color: var(--color-primary-4);}
 div#header-promo-color5 {background-color: var(--color-primary-5);}
 
 div#header-promo-content {
-    height: var(--header-promo-height);
+    height: fit-content;
+    padding: 40px 0px;
     width: 100vw;
-    position: absolute;
-    top: 0px; left: 0px;
     text-align: center;
     overflow: hidden;
 }
 
 div#header-promo-div {
     width: 50%;
-    height: var(--header-promo-height);
+    height: fit-content;
     margin: 0 auto;
     display: flex;
     justify-content: center;
