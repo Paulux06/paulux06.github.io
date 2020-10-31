@@ -10,6 +10,7 @@ function loadProjects(projectID=0) {
                 {title: "Flow", img: "./resources/projets/flow.png"},
                 {title: "Processors", img: "./resources/projets/processors.png"},
                 {title: "Robot", img: "./resources/projets/robot.jpg"},
+                {title: "FyneWav", img: "./resources/projets/fynewav.png"},
                 {title: "Site web", img: "./resources/projets/site_web.png"}
             ]
         },
