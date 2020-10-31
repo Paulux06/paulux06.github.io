@@ -57,6 +57,7 @@ function whiteMode() {
     document.documentElement.style.setProperty("--color-brightness", "0.2");
     nightMode = false;
     localStorage.setItem("night-mode", "false");
+    document.getElementById("night-mode-btn").style.transform = "translateX(0%)";
 }
 function darkMode() {
     document.documentElement.style.setProperty("--color-white", "#202020");
@@ -67,6 +68,7 @@ function darkMode() {
     document.documentElement.style.setProperty("--color-brightness", "1");
     nightMode = true;
     localStorage.setItem("night-mode", "true");
+    document.getElementById("night-mode-btn").style.transform = "translateX(113%)";
 }
 
 function toogleLanguageMode() {

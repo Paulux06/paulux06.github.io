@@ -53,4 +53,6 @@ div.option-button-div {
     height: 26px; width: 26px;
     margin: 2px;
     padding: 0px;
+    transform: translateX(0%);
+    transition: transform var(--animation-length-quick) var(--animation-ease);
 }
