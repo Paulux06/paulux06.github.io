@@ -69,7 +69,7 @@ div#header-promo-div {
 }
 
 h1#header-promo-pseudo {
-    color: var(--color-white);
+    color: white;
     margin: 0px; padding: 0px;
     font-family: "Roboto bold";
     text-shadow: var(--text-border-shadow);
@@ -85,7 +85,7 @@ h1#header-promo-pseudo {
 }
 
 h2#header-promo-welcome  {
-    color: var(--color-white);
+    color: white;
     margin: 0px; padding: 0px;
     font-family: "Roboto bold";
     text-shadow: var(--text-border-shadow);

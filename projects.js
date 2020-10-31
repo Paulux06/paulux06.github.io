@@ -7,10 +7,10 @@ function loadProjects(projectID=0) {
     var projects = [
         {title: "Mes Projets",
             list: [
-                {title: "Flow", img: "./resources/accueil/javascript.png"},
-                {title: "Processors", img: "./resources/accueil/cpp.png"},
-                {title: "Robot", img: "./resources/accueil/java.png"},
-                {title: "Site web", img: "./resources/accueil/python.png"}
+                {title: "Flow", img: "./resources/projets/flow.png"},
+                {title: "Processors", img: "./resources/projets/processors.png"},
+                {title: "Robot", img: "./resources/projets/robot.jpg"},
+                {title: "Site web", img: "./resources/projets/site_web.png"}
             ]
         },
         {title: "Mini-codes",

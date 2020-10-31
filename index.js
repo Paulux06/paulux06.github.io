@@ -8,6 +8,11 @@ var loadingBusy = false;
 var loadingStart = 0;
 
 window.onload = () => {
+    setupOptions();
+    document.getElementById("main-options-container").onclick = toogleOptionsPanel;
+    document.getElementById("night-mode-btn").onclick = toogleNightMode;
+    document.getElementById("language-btn").onclick = toogleLanguageMode;
+    hideOptionsPanel();
     connexionSetup();
     loadingStart = new Date().getTime() / 1000;
     waitUntilSigned();
@@ -70,3 +75,7 @@ function removeLoading() {
         loadingContainer.style.display = "none";
     }, ANIMATION_LENGTH_SLOW);
 }
+window.addEventListener("scroll", (ev)=> {
+    if (window.scrollY < 50) showOptions();
+    if (window.scrollY > 90) hideOptions();
+})

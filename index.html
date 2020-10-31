@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="global.css">
         <link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="connexion.css">
+        <link rel="stylesheet" href="options.css">
         <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
@@ -15,6 +16,7 @@
         <script src="./connexion.js"></script>
         <script src="./header.js"></script>
         <script src="./index.js"></script>
+        <script src="./options.js"></script>
 
         <script src="./accueil.js"></script>
         <script src="./projects.js"></script>
@@ -90,6 +92,21 @@
         <div id="main-loading-container">
             <img src="./resources/icons/favicon.png" alt="loading icon" id="main-loading-logo">
             <h2 id="main-loading-info">Chargement des ressources ...</h2>
+        </div>
+        <div id="main-options-container"></div>
+        <div id="main-options-panel">
+            <div id="night-mode-container" class="option-container">
+                <p class="options-text">Mode nuit</p>
+                <div class="option-button-container">
+                    <div class="option-button-div" id="night-mode-btn"></div>
+                </div>
+            </div>
+            <div id="language-container" class="option-container">
+                <p class="options-text">Mode Anglais</p>
+                <div class="option-button-container">
+                    <div class="option-button-div" id="language-btn"></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

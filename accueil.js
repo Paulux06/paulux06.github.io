@@ -49,7 +49,7 @@ function loadAccueil() {
                 languages_container.appendChild(language_container);
             }
             pic.src = languages[i].img;
-        }, 600+i*10);
+        }, 600+i*120);
     }
     languages_borders.appendChild(languages_container);
     languages_centering.appendChild(languages_borders);

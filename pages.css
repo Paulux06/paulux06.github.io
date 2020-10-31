@@ -106,7 +106,7 @@ h2.inline-text {
     justify-content: center;
     font-family: "Roboto bold";
     font-size: 30px;
-    color: var(--color-white);
+    color: white;
     text-shadow: var(--text-border-shadow);
     padding-top: 10px; padding-bottom: 10px;
     backdrop-filter: blur(6px) brightness(1.2);
@@ -192,7 +192,7 @@ h2.quad-l-top-text, h2.quad-r-top-text,
 h2.quad-l-bottom-text, h2.quad-r-bottom-text {
     font-size: 30px;
     font-family: "Roboto bold";
-    color: var(--color-white);
+    color: white;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     padding: 14px 0px;
@@ -285,7 +285,7 @@ div.enrol-container {
     flex-direction: column;
     justify-content: center;
     background-position: center;
-    background-size: 90vh 50vh;
+    background-size: cover;
     height: max-content;
     width: 100%;
     height: 6vh;
@@ -295,7 +295,7 @@ div.enrol-container {
     transition: height var(--animation-length-normal) var(--animation-ease);
 }
 div.enrol-text-container {
-    background-color: white;
+    background-color: var(--color-white);
     opacity: 1;
     height: max-content;
     overflow: hidden;

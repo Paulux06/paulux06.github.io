@@ -1,0 +1,56 @@
+div#main-options-container {
+    background-image: url("./resources/icons/options.png");
+    background-size: 30px 30px;
+    height: 30px; width: 30px;
+    top: 0px; right: 20px;
+    position: fixed;
+    cursor: pointer;
+    transform: rotate(0deg);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+    transition: top var(--animation-length-normal) var(--animation-ease),
+                transform var(--animation-length-normal) var(--animation-ease);
+}
+div#main-options-panel {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    min-height: 100px; min-width: 200px;
+    height: fit-content; width: fit-content;
+    top: 60px; right: 20px;
+    position: fixed;
+    z-index: 10;
+    box-shadow: var(--shadow-strong);
+    transition: right var(--animation-length-normal) var(--animation-ease);
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 8px;
+}
+
+div.option-container {
+    margin: 6px; margin-left: auto;
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+}
+p.options-text {
+    color: var(--color-grey-dark);
+    font-family: "Roboto medium";
+    font-size: 20px;
+    margin: 4px;
+    padding: 0px;
+}
+div.option-button-container {
+    border: solid 2px var(--color-grey-dark);
+    border-radius: 16px;
+    height: 30px; width: 60px;
+    background-color: var(--color-white);
+    margin-left: 8px;
+}
+div.option-button-div {
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: var(--color-grey-dark);
+    height: 26px; width: 26px;
+    margin: 2px;
+    padding: 0px;
+}

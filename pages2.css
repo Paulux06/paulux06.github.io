@@ -70,6 +70,7 @@ input.chat-textinput {
     border: solid 2px var(--color-grey-dark);
     border-radius: 8px;
     outline: none;
+    background-color: var(--color-white);
 }
 input.chat-buttoninput {
     font-family: "Roboto medium";
@@ -85,7 +86,7 @@ div.chat-msg-spacer {
 div.chat-box {
     height: 60vh;
     border-radius: 14px;
-    box-shadow: inset 0px 0px 50px #EEE;
+    box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -109,7 +110,6 @@ p.chat-msg-content, p.chat-msg-author, p.chat-msg-time {
 p.chat-msg-time {
     font-size: 10px;
     padding-top: 5px;
-    color: var(--color-grey-dark);
 }
 p.chat-msg-content {
     margin: 0px 8px;
@@ -125,6 +125,7 @@ p.chat-msg-author {
     display: flex;
     flex-direction: row;
     margin-right: auto;
+    color: var(--color-black);
 }
 .coloredback {
     background-color: var(--color-primary-3);
@@ -132,3 +133,5 @@ p.chat-msg-author {
     flex-direction: row-reverse;
     margin-left: auto;
 } .coloredback p.chat-msg-author {display: none;}
+  .coloredback p.chat-msg-content {color: var(--color-white);}
+  .coloredback p.chat-msg-time {color: var(--color-white);}
