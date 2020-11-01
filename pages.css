@@ -116,6 +116,7 @@ h2.inline-text {
     border-image: var(--color-gradient);
     border-image-slice: 1;
     user-select: none;
+    transition: color var(--animation-length-quick) var(--animation-ease);
 }
 
 div.inlines-container:hover div.inline-container:hover {
@@ -175,13 +176,14 @@ div.quad-l-top, div.quad-r-top, div.quad-l-bottom, div.quad-r-bottom {
     height: 50%;
     z-index: 4;
     transform: scale(1);
-    transition: transform var(--animation-length-quick) var(--animation-ease);
+    transition: transform var(--animation-length-quick) var(--animation-ease),
+                background-color var(--animation-length-quick) var(--animation-ease);
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-image: url("./resources/accueil/javascript.png");
-    background-size: 640px 360px;
+    background-size: 210%;
+    background-position: 50% 50%;
     animation: project-in var(--animation-length-normal) var(--animation-ease);
 }
 div.quad-l-top:hover, div.quad-r-top:hover,
@@ -201,6 +203,7 @@ h2.quad-l-bottom-text, h2.quad-r-bottom-text {
     border-image: var(--color-gradient);
     border-image-slice: 1;
     user-select: none;
+    transition: color var(--animation-length-quick) var(--animation-ease);
 }
 
 
@@ -307,7 +310,8 @@ div.enrol-text-container {
     transform: scale(1);
     border-radius: 15px;
     transition: opacity var(--animation-length-quick) var(--animation-ease),
-                transform var(--animation-length-quick) var(--animation-ease);
+                transform var(--animation-length-quick) var(--animation-ease),
+                background-color var(--animation-length-quick) var(--animation-ease);
 }
 h2.enrol-text {
     font-family: "Roboto bold";

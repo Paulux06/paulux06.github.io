@@ -79,3 +79,17 @@ window.addEventListener("scroll", (ev)=> {
     if (window.scrollY < 50) showOptions();
     if (window.scrollY > 90) hideOptions();
 })
+
+function spawnInProgress() {
+    var img = document.createElement("img");
+    var div = document.createElement("div");
+    var p = document.createElement("p");
+    img.classList.add("in-progress");
+    div.classList.add("in-progress");
+    p.classList.add("in-progress");
+    img.src = "./resources/icons/inprogress.png";
+    p.innerHTML = "Oh ! On dirait que cette page n'est pas encore faite !"
+    div.appendChild(img);
+    div.appendChild(p);
+    MAIN_PAGE_CONTAINER.appendChild(div);
+}

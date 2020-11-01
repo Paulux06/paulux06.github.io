@@ -7,16 +7,16 @@ function loadProjects(projectID=0) {
     var projects = [
         {title: "Mes Projets",
             list: [
-                {title: "Flow", img: "./resources/projets/flow.png"},
-                {title: "Processors", img: "./resources/projets/processors.png"},
-                {title: "Robot", img: "./resources/projets/robot.jpg"},
-                {title: "FyneWav", img: "./resources/projets/fynewav.png"},
-                {title: "Site web", img: "./resources/projets/site_web.png"}
+                {title: "Flow", img: "./resources/projets/flow.png", onclick: ()=>{clearContent(); spawnInProgress();}},
+                {title: "Processors", img: "./resources/projets/processors.png", onclick: ()=>{clearContent(); spawnInProgress();}},
+                {title: "Robot", img: "./resources/projets/robot.jpg", onclick: ()=>{clearContent(); spawnInProgress();}},
+                {title: "FyneWav", img: "./resources/projets/fynewav.png", onclick: ()=>{clearContent(); spawnInProgress();}},
+                {title: "Site web", img: "./resources/projets/site_web.png", onclick: ()=>{clearContent(); spawnInProgress();}}
             ]
         },
         {title: "Mini-codes",
             list: [
-                {title: "Visualizer", img: "./resources/projets/visualizer.png"}
+                {title: "Visualizer", img: "./resources/projets/visualizer.png", onclick: ()=>{clearContent(); spawnInProgress();}}
             ]
         }
     ]
@@ -33,7 +33,7 @@ function loadProjects(projectID=0) {
             var quote_text = document.createElement("h1");
             quote_text.classList.add("title-text"); quote_text.innerHTML = cur_prod.title;
             quote_container.appendChild(quote_text);
-            MAIN_PAGE_CONTAINER.appendChild(quote_container);
+            if (CURRENT_SECTION == "projects") MAIN_PAGE_CONTAINER.appendChild(quote_container);
             
             /********************************************
             *                                           *
@@ -58,6 +58,7 @@ function loadProjects(projectID=0) {
                         project_text_container.classList.add("enrol-text-container");
                         project_container.classList.add("enrol-container");
                         project_container.style.backgroundImage = "url("+cur_prod.list[i].img+")";
+                        project_container.onclick = cur_prod.list[i].onclick;
                         project_text_container.appendChild(project_text);
                         project_container.appendChild(project_text_container);
                         var space = document.createElement("div"); space.classList.add("enrols-space");
@@ -69,7 +70,7 @@ function loadProjects(projectID=0) {
                     pic.src = cur_prod.list[i].img;
                 }, 200+i*10);
             }
-            MAIN_PAGE_CONTAINER.appendChild(projects_centering);
+            if (CURRENT_SECTION == "projects") MAIN_PAGE_CONTAINER.appendChild(projects_centering);
             setTimeout(() => {projects_centering.style.transform = "scale(1, 1)";}, 500);
         }, h*800);
     }
@@ -84,6 +85,6 @@ function loadProjects(projectID=0) {
     var quote_text = document.createElement("h3");
     quote_text.classList.add("redirect"); quote_text.innerHTML = "Proposer une idée de projet"
     quote_container.appendChild(quote_text);
-    setTimeout(()=>{MAIN_PAGE_CONTAINER.appendChild(quote_container);}, 900);
-    setTimeout(()=>{loadingBusy = false;}, 900);
+    setTimeout(()=>{if (CURRENT_SECTION == "projects") MAIN_PAGE_CONTAINER.appendChild(quote_container);}, 900);
+    loadingBusy = false;
 }

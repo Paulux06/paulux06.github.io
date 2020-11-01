@@ -107,6 +107,7 @@ div#banner-container {
     box-shadow: var(--shadow);
     background-color: var(--color-white);
     z-index: 10;
+    transition: background-color var(--animation-length-quick) var(--animation-ease);
 }
 
 div#option-banner-div {
@@ -120,6 +121,7 @@ div#option-bottom-line {
     height: 2px;
     border-radius: 2px;
     background-color: var(--color-grey-light);
+    transition: background-color var(--animation-length-quick) var(--animation-ease);
 }
 
 div#option-banner-container {
@@ -135,7 +137,8 @@ img#header-icon {
     width: var(--header-banner-height);
     height: var(--header-banner-height);
     user-select: none;
-    transition: transform var(--animation-length-normal) var(--animation-ease);
+    transition: transform var(--animation-length-normal) var(--animation-ease),
+                filter var(--animation-length-quick) var(--animation-ease);
     animation: header-icon-in var(--animation-length-slow) var(--animation-ease);
 } img#header-icon:hover {
     transform: translate(0px, 0px) rotate(0deg) scale(1.1);
@@ -156,7 +159,8 @@ img#header-icon {
     color: var(--color-grey-dark);
     cursor: pointer;
     transform: translate(0px, 0px) scale(var(--header-option-scale));
-    transition: transform var(--animation-length-quick) var(--animation-ease),
+    transition: transform var(--animation-length-quick) var(--animation-ease)
+                color var(--animation-length-quick) var(--animation-ease),
     border-bottom-width var(--animation-length-quick) var(--animation-ease),
     color var(--animation-length-quick) var(--animation-ease);
     animation: headerOptionIn var(--animation-length-normal) var(--animation-ease);
@@ -165,6 +169,7 @@ img#header-icon {
 .option-banner-text:hover {
     transform: translate(0px, -3px) scale(var(--header-option-scale)) rotate(-2deg);
     color: var(--color-primary-3);
+    transition: color var(--animation-length-quick) var(--animation-ease);
 }
 .option-banner-text:after {
     display:block;
@@ -173,7 +178,7 @@ img#header-icon {
     color: aqua;
     transform: scaleX(0);  
     transition: transform var(--animation-length-quick) var(--animation-ease),
-    border-bottom-color var(--animation-length-quick) var(--animation-ease);
+                border-bottom-color var(--animation-length-quick) var(--animation-ease);
 }
 .option-banner-text:hover:after { transform: scaleX(1); border-bottom-color: var(--color-primary-2);}
 

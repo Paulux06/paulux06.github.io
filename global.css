@@ -89,6 +89,7 @@ body {
     overflow-x: hidden;
     margin-bottom: 50px;
     background-color: var(--color-white);
+    transition: background-color var(--animation-length-quick) var(--animation-ease);
 }
 
 /***************************
@@ -113,6 +114,7 @@ div#main-page-container {
     z-index: 2;
     background-color: var(--color-white);
     min-height: 80vh;
+    transition: background-color var(--animation-length-quick) var(--animation-ease);
 }
 
 img#main-loading-logo {
@@ -134,4 +136,22 @@ h2#main-loading-info {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
+}
+
+div.in-progress {
+    text-align: center;
+}
+p.in-progress {
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+    font-family: "Roboto bold";
+    color: var(--color-grey-dark);
+}
+img.in-progress {
+    filter: brightness(var(--color-brightness));
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    height: 380px;
 }

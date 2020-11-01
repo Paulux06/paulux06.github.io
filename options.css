@@ -19,7 +19,8 @@ div#main-options-panel {
     position: fixed;
     z-index: 10;
     box-shadow: var(--shadow-strong);
-    transition: right var(--animation-length-normal) var(--animation-ease);
+    transition: right var(--animation-length-normal) var(--animation-ease),
+                background-color var(--animation-length-quick) var(--animation-ease);
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -45,6 +46,7 @@ div.option-button-container {
     height: 30px; width: 60px;
     background-color: var(--color-white);
     margin-left: 8px;
+    transition: border-color var(--animation-length-quick) var(--animation-ease);
 }
 div.option-button-div {
     cursor: pointer;
@@ -54,5 +56,6 @@ div.option-button-div {
     margin: 2px;
     padding: 0px;
     transform: translateX(0%);
-    transition: transform var(--animation-length-quick) var(--animation-ease);
+    transition: transform var(--animation-length-quick) var(--animation-ease),
+                color var(--animation-length-quick) var(--animation-ease);
 }

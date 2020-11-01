@@ -58,6 +58,8 @@ function whiteMode() {
     nightMode = false;
     localStorage.setItem("night-mode", "false");
     document.getElementById("night-mode-btn").style.transform = "translateX(0%)";
+    document.getElementById("night-mode-btn").style.backgroundColor = "var(--color-grey-dark)";
+    document.getElementById("night-mode-btn").parentElement.style.borderColor = "var(--color-grey-dark)";
 }
 function darkMode() {
     document.documentElement.style.setProperty("--color-white", "#202020");
@@ -69,6 +71,8 @@ function darkMode() {
     nightMode = true;
     localStorage.setItem("night-mode", "true");
     document.getElementById("night-mode-btn").style.transform = "translateX(113%)";
+    document.getElementById("night-mode-btn").style.backgroundColor = "var(--color-primary-5)";
+    document.getElementById("night-mode-btn").parentElement.style.borderColor = "var(--color-primary-5)";
 }
 
 function toogleLanguageMode() {
