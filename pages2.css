@@ -33,7 +33,7 @@ h3.errorlabel {
 }
 img.error-logo {
     margin-top: 60px;
-    filter: brightness(0);
+    filter: brightness(var(--color-brightness));
     width: 200px;
     animation: error-logo-in var(--animation-length-slow) var(--animation-ease);
 }

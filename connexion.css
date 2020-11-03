@@ -53,6 +53,7 @@ div#email-container, div#confirm-container {
 .label {
     font-family: "Roboto medium";
     color: var(--color-black);
+    background-color: var(--color-white);
     margin: 0px 2px;
 }
 
@@ -61,6 +62,7 @@ div#email-container, div#confirm-container {
     border-radius: var(--border-radius);
     font-family: "Roboto medium";
     color: var(--color-black);
+    background-color: var(--color-white);
     margin: 0px; margin-bottom: 20px;
     transition: border-color var(--animation-length-quick) var(--animation-ease);
 } .input:hover {border-color: var(--color-primary-3);}
