@@ -317,6 +317,14 @@ function loadRessources() {
     SOUNDS.CHAPTER_3.BACKGROUND.addEventListener("loadeddata", verifyLoading);
     SOUNDS.CHAPTER_3.BACKGROUND.volume = 0.4;
     SOUNDS.CHAPTER_3.BACKGROUND.loop = true;
+    
+    max_element_loaded+=2;
+    SOUNDS.CHAPTER_4.NARATIVE = new Audio("./resources/audio/chapter_4/narative.wav");
+    SOUNDS.CHAPTER_4.NARATIVE.addEventListener("loadeddata", verifyLoading);
+    SOUNDS.CHAPTER_4.BACKGROUND = new Audio("./resources/audio/rain.wav");
+    SOUNDS.CHAPTER_4.BACKGROUND.addEventListener("loadeddata", verifyLoading);
+    SOUNDS.CHAPTER_4.BACKGROUND.volume = 0.4;
+    SOUNDS.CHAPTER_4.BACKGROUND.loop = true;
 
     max_element_loaded+=3;
     SOUNDS.SELECT.BACKGROUND = new Audio("./resources/audio/campfire.wav");
@@ -350,8 +358,9 @@ function loadRessources() {
                           "./resources/images/chapter_1/grenier_1.jpg", "./resources/images/chapter_1/grenier_2.jpg"]
     let chapter_2_pics = ["./resources/images/chapter_2/grenier.jpg", "./resources/images/chapter_2/alarme.jpg",
                           "./resources/images/chapter_2/wagon.jpg", "./resources/images/chapter_2/arrivee_camps.jpg"]
-    let chapter_3_pics = ["./resources/images/chapter_3/travail.jpg", "./resources/images/chapter_3/camp.jpg"]
-    let chapter_4_pics = []
+    let chapter_3_pics = ["./resources/images/chapter_3/travail.jpg", "./resources/images/chapter_3/camp.jpg",
+                          "./resources/images/chapter_3/camp2.jpg"]
+    let chapter_4_pics = ["./resources/images/chapter_4/barbeles.jpg", "./resources/images/chapter_4/shoah.jpg"]
     max_element_loaded+=chapter_1_pics.length;
     for (let i = 0; i < chapter_1_pics.length; i++) {
         img = new Image(); img.src = chapter_1_pics[i];

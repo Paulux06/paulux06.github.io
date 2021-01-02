@@ -187,11 +187,12 @@ function setupchapter3() {
     addChapterEvents(()=>{remPopup("more-camps")}, 15000);
     addChapterEvents(()=>{setDialogText("Nous recevions l’équivalent d’un repas par jour et nous travaillions comme des forcenés.")}, 17000);
     addChapterEvents(()=>{setDialogText("Certains mourraient de faim, d’autres d’épuisement, et d'autres encore sous les balles d’allemands.")}, 21300);
+    addChapterEvents(()=>{nextBackground(CONSTANTS.CHAPTER_3)}, 24000);
     addChapterEvents(()=>{setDialogText("Pour vérifier si nous étions encore apte au travail, il arrivait aux responsables du camp, d’organiser en son centre, une course en cercle.")}, 26200);
     addChapterEvents(()=>{setDialogText("Si ils nous trouvaient trop fatigué ou trop vieux on nous faisait sortir, puis tous ceux choisis partaient pour un autre endroit.")}, 33400);
-    addChapterEvents(()=>{nextBackground(CONSTANTS.CHAPTER_3)}, 39000);
     addChapterEvents(()=>{setDialogText("Mon père ne tenait plus. Il s’est écroulé. Il fut écarté puis emmené avec les inaptes.")}, 40100);
     addChapterEvents(()=>{setDialogText("Des bruits couraient sur des camps de la mort. On priait pour que ce ne soit que des rumeurs et que les inaptes et les enfants soient simplement mis ailleurs.")}, 46000);
+    addChapterEvents(()=>{nextBackground(CONSTANTS.CHAPTER_3)}, 47000);
     addChapterEvents(()=>{setDialogText("Avec moi il ne restait que mon dernier frère Isaac de 1 an mon cadet.")}, 53200);
     addChapterEvents(()=>{setDialogText("Des années entières se sont écoulées, nous travaillions tous les jours. ")}, 58000);
     addChapterEvents(()=>{setDialogText("De nombreux amis n’ont pas survécu.")}, 62100);
@@ -206,8 +207,27 @@ function setupchapter3() {
 function setupchapter4() {
     clearChapterEvents();
     addChapterEvents(openDialog, 0);
-    addChapterEvents(()=>{setDialogText("Texte pour le chapitre 4.")}, 200);
-    addChapterEvents(closeDialog, 2000);
+    addChapterEvents(()=>{nextBackground(CONSTANTS.CHAPTER_4)}, 0);
+    addChapterEvents(()=>{setDialogText("Aujourd’hui, peu de rescapés de la Shoah sont encore vivants pour témoigner de ce qu’ils ont vécu.")}, 700);
+    addChapterEvents(()=>{
+        addPopup("more-sources", "Nos sources", "Voir les sources utilisés", {x: 10, y: 70}, "./doc/chapter_4/sources.html",
+            ()=>{SOUNDS.CHAPTER_4.NARATIVE.pause();pauseChapterEvents();},
+            ()=>{SOUNDS.CHAPTER_4.NARATIVE.play();resumeChapterEvents();}
+        )
+    }, 3000);
+    addChapterEvents(()=>{setDialogText("La plupart des personnes qui sont revenus n’ont pas voulu en parler et ont gardé pour eux ce qu’ils ont vécu.")}, 5900);
+    addChapterEvents(()=>{setDialogText("Plus de 6 millions de Juifs ont été tués dans les camps, 75 000 étaient français, parmi eux mes parents et mon frère aîné.")}, 11400);
+    addChapterEvents(()=>{setDialogText("Les auteurs de ces actes n’ont pas tous été punis. Car il était impossible de punir tout le système judiciaire.")}, 19200);
+    addChapterEvents(()=>{setDialogText("Comme beaucoup, je n’ai jamais retrouvé ma vie d’avant, ni les personnes que je connaissais, je suis resté quand même très proche de mon dernier frère.")}, 24800);
+    addChapterEvents(()=>{setDialogText("Il ne nous restait rien. D’un commun accord nous avons décidé de changer totalement de vie, de tout rebâtir.")}, 31800);
+    addChapterEvents(()=>{setDialogText("Retrouver notre dignité perdue.")}, 38000);
+    addChapterEvents(()=>{nextBackground(CONSTANTS.CHAPTER_4)}, 39000);
+    addChapterEvents(()=>{setDialogText("Nous devions apprendre à vivre avec cette histoire, notre histoire.")}, 40200);
+    addChapterEvents(()=>{setDialogText("Je raconte aujourd’hui ce qu’il m’est arrivé, et je suis loin d’être le seul à avoir vécu toutes ces horreurs..")}, 44400);
+    addChapterEvents(()=>{setDialogText("C’est un devoir, mais avant tout un besoin, que de témoigner de cette période.")}, 49500);
+    addChapterEvents(()=>{remPopup("more-sources")}, 51000);
+    addChapterEvents(()=>{setDialogText("Nous ne devons jamais oublier, pour ne pas reproduire les erreurs passées.")}, 54100);
+    addChapterEvents(closeDialog, 58600);
     try {SOUNDS.CHAPTER_4.NARATIVE.play();} catch (e) {}
     try {SOUNDS.CHAPTER_4.BACKGROUND.play();} catch (e) {}
     SOUNDS.CHAPTER_4.EFFECT_INDEX = 0;
