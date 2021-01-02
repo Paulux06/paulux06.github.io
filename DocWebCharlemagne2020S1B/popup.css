@@ -21,9 +21,11 @@ div.popup-div {
     top: 0%; left: 0%;
     width: fit-content; height: fit-content;
     box-shadow: 0px 2px 12px #0006;
-    background-color: #122334;
+    background-color: #122334BB;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 4px 6px;
-    border: solid 2px white;
+    border: solid 1px #AAA;
     border-radius: 4px;
     transition: transform 400ms ease, box-shadow 400ms ease, top 100ms ease, left 100ms ease, width 100ms ease, height 100ms ease;
     cursor: pointer;
@@ -58,6 +60,7 @@ iframe.popup-frame {
     transform: scale(0.9);
     display: none;
     border: none;
+    box-shadow: 0px 0px 20px black inset;
 }
 
 div.remove-popup {

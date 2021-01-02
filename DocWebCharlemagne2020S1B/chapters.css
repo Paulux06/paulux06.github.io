@@ -19,8 +19,11 @@ div#chapters-background {
     width: 100vw; height: 100vh;
     transition: transfrom 200ms ease,
                 opacity 200ms ease;
-    background-size: 100vw 100vh;
-    background-color: #122334;
+    /*background-size: 100vw 100vh;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
     transition: background 200ms;
 }
 div#chapters-foreground {

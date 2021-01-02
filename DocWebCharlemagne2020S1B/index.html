@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="chapters.css">
     <link rel="stylesheet" href="select.css">
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="credits.css">
     <script src="index.js"></script>
     <script src="select.js"></script>
     <script src="chapter.js"></script>
     <script src="popup.js"></script>
+    <script src="credits.js"></script>
 </head>
 <body>
     <div id="popup-container"></div>
@@ -26,6 +28,19 @@
             </div>
         </div>
         <div id="select-container">
+            <div id="credits-container">
+                <div id="credits-arrow" title="Comptes rendus"></div>
+                <div id="credits-content">
+                    <p id="credits-title">Comptes rendus</p>
+                    <div id="credits-names">
+                        <p class="credits-name" id="credits-name-paul" onclick="loadCredits(CONSTANTS.PAUL)">Paul</p>
+                        <p class="credits-name" id="credits-name-tom" onclick="loadCredits(CONSTANTS.TOM)">Tom</p>
+                        <p class="credits-name" id="credits-name-robin" onclick="loadCredits(CONSTANTS.ROBIN)">Robin</p>
+                        <p class="credits-name" id="credits-name-benjamin" onclick="loadCredits(CONSTANTS.BENJAMIN)">Benjamin</p>
+                    </div>
+                    <iframe id="credits-visu"></iframe>
+                </div>
+            </div>
             <div id="select-background"></div>
             <div id="select-foreground">
                 <div id="select-image-chapter1"

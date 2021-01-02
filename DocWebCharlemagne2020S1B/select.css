@@ -50,7 +50,7 @@ div#select-image-chapter1 {
 }
 div#select-image-chapter2 {
     position: relative;
-    top: 23vh; left: 54vw;
+    top: 24vh; left: 54vw;
     width: 13vw; height: calc(15vh - 50px);
     border: solid 2px black;
     text-align: center;

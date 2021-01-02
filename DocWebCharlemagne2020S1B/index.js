@@ -12,7 +12,11 @@ var CONSTANTS = {
     CHAPTER_3: 5,
     CHAPTER_4: 6,
     RUNNING: 1,
-    HIDER_X_TRANSITION: "left 1000ms linear, width 1000ms linear",
+    PAUL: 7,
+    TOM: 8,
+    ROBIN: 9,
+    BENJAMIN: 10,
+    HIDER_X_TRANSITION: "left 500ms linear, width 500ms linear",
     HIDER_Y_TRANSITION: "none",
     DIALOG_TEXT_HEIGHT: 23,
     ANIMATION_DELAY: 210
@@ -79,6 +83,7 @@ loadRessources();
 window.onload = () => {
     setChoicesEnabled(false);
     //startAudioStream();
+    setupCredits();
     changeViewTo(CONSTANTS.VIEW_SELECT);
 }
 
@@ -289,13 +294,31 @@ function closeFullscreen() {
 }
 
 function loadRessources() {
-    max_element_loaded = 8;
+    max_element_loaded = 2;
     SOUNDS.CHAPTER_1.NARATIVE = new Audio("./resources/audio/chapter_1/narative.wav");
     SOUNDS.CHAPTER_1.NARATIVE.addEventListener("loadeddata", verifyLoading);
     SOUNDS.CHAPTER_1.BACKGROUND = new Audio("./resources/audio/rain.wav");
     SOUNDS.CHAPTER_1.BACKGROUND.addEventListener("loadeddata", verifyLoading);
-    SOUNDS.CHAPTER_1.BACKGROUND.volume = 1;
+    SOUNDS.CHAPTER_1.BACKGROUND.volume = 0.4;
     SOUNDS.CHAPTER_1.BACKGROUND.loop = true;
+    
+    max_element_loaded+=2;
+    SOUNDS.CHAPTER_2.NARATIVE = new Audio("./resources/audio/chapter_2/narative.wav");
+    SOUNDS.CHAPTER_2.NARATIVE.addEventListener("loadeddata", verifyLoading);
+    SOUNDS.CHAPTER_2.BACKGROUND = new Audio("./resources/audio/rain.wav");
+    SOUNDS.CHAPTER_2.BACKGROUND.addEventListener("loadeddata", verifyLoading);
+    SOUNDS.CHAPTER_2.BACKGROUND.volume = 0.4;
+    SOUNDS.CHAPTER_2.BACKGROUND.loop = true;
+    
+    max_element_loaded+=2;
+    SOUNDS.CHAPTER_3.NARATIVE = new Audio("./resources/audio/chapter_3/narative.wav");
+    SOUNDS.CHAPTER_3.NARATIVE.addEventListener("loadeddata", verifyLoading);
+    SOUNDS.CHAPTER_3.BACKGROUND = new Audio("./resources/audio/rain.wav");
+    SOUNDS.CHAPTER_3.BACKGROUND.addEventListener("loadeddata", verifyLoading);
+    SOUNDS.CHAPTER_3.BACKGROUND.volume = 0.4;
+    SOUNDS.CHAPTER_3.BACKGROUND.loop = true;
+
+    max_element_loaded+=3;
     SOUNDS.SELECT.BACKGROUND = new Audio("./resources/audio/campfire.wav");
     SOUNDS.SELECT.BACKGROUND.addEventListener("loadeddata", verifyLoading);
     SOUNDS.SELECT.BACKGROUND.loop = true;
@@ -305,6 +328,8 @@ function loadRessources() {
     SOUNDS.GUI.CLICK = new Audio("./resources/audio/click.wav");
     SOUNDS.GUI.CLICK.addEventListener("loadeddata", verifyLoading);
     SOUNDS.GUI.CLICK.volume = 0.5;
+
+    max_element_loaded+=3;
     let img = new Image(); img.src = "./resources/images/select/background.png";
     img.addEventListener("load", ()=>{
         document.getElementById("select-background").style.backgroundImage = "url(./resources/images/select/background.png)";
@@ -323,9 +348,9 @@ function loadRessources() {
 
     let chapter_1_pics = ["./resources/images/chapter_1/ghetto.jpg", "./resources/images/chapter_1/echelle.jpg",
                           "./resources/images/chapter_1/grenier_1.jpg", "./resources/images/chapter_1/grenier_2.jpg"]
-    let chapter_2_pics = ["./resources/images/chapter_2/alarme.jpg", "./resources/images/chapter_2/wagon.jpg",
-                          "./resources/images/chapter_2/arrivee_camps.jpg"]
-    let chapter_3_pics = ["./resources/images/chapter_3/camp.jpg", "./resources/images/chapter_3/travail.jpg"]
+    let chapter_2_pics = ["./resources/images/chapter_2/grenier.jpg", "./resources/images/chapter_2/alarme.jpg",
+                          "./resources/images/chapter_2/wagon.jpg", "./resources/images/chapter_2/arrivee_camps.jpg"]
+    let chapter_3_pics = ["./resources/images/chapter_3/travail.jpg", "./resources/images/chapter_3/camp.jpg"]
     let chapter_4_pics = []
     max_element_loaded+=chapter_1_pics.length;
     for (let i = 0; i < chapter_1_pics.length; i++) {

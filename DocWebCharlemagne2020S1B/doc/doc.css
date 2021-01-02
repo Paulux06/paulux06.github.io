@@ -1,0 +1,64 @@
+body {
+    background-color: transparent;
+}
+h1.titre {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    border: solid 2px white;
+}
+
+h2 {
+    text-align: center;
+}
+
+div.container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 20px;
+}
+div#text {
+    color: white;
+    font-size: 20px;
+    width: 700px;
+    text-align: justify;
+
+}
+div#image {
+    margin-top: 30px;
+    margin-right: 30px;
+    color: white;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    text-align: center;
+}
+div#image > img {
+    max-width: 700px;
+}
+div#legende {
+    width: 500px;
+}
+div#citation {
+    margin-top: 50px;
+    color: white;
+    font-size: 20px;
+    width: 60%;
+}
+div#phrase {
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+}
+div#auteur {
+    margin: 20px;
+    text-align: center;
+}
+
+
