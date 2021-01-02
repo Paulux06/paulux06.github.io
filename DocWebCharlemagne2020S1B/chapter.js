@@ -140,13 +140,13 @@ function setupchapter2() {
     addChapterEvents(()=>{setDialogText("Plusieurs mois plus tard, les armées allemandes décidèrent de vider le ghetto, tous les juifs présents ont dû être déporté, nous y compris.")}, 21700);
     addChapterEvents(()=>{setDialogText("Encore une fois, nous avions réussi à anticiper la menace et sommes retournés dans notre grenier, pour y passer la nuit en attendant que la tempête passe.")}, 28900);
     addChapterEvents(()=>{setDialogText("Malheureusement, cette nuit, les ennemis sont revenus, et ont fouillé de fond en comble tout le ghetto pour dénicher tous les juifs.")}, 37500);
-    addChapterEvents(()=>{setDialogText("Notre cachette n’étant pas infaillible nous avons été découverts et pour nous faire comprendre qu’ils ne faut pas leur désobéir, ils tuèrent Isaiah, mon frère aîné d’une balle dans la tête.")}, 44700);
     addChapterEvents(()=>{
-        addPopup("more-gestapo", "Les arrestations de juifs", "Plus d'information", {x:15,y:45}, "./doc/chapter_2/gestapo.html",
+        addPopup("more-gestapo", "Les rafles", "Plus d'information", {x:15,y:45}, "./doc/chapter_2/rafles.html",
             ()=>{SOUNDS.CHAPTER_2.NARATIVE.pause();pauseChapterEvents();},
             ()=>{SOUNDS.CHAPTER_2.NARATIVE.play();resumeChapterEvents();}
         )
-    }, 45500);
+    }, 38000);
+    addChapterEvents(()=>{setDialogText("Notre cachette n’étant pas infaillible nous avons été découverts et pour nous faire comprendre qu’ils ne faut pas leur désobéir, ils tuèrent Isaiah, mon frère aîné d’une balle dans la tête.")}, 44700);
     addChapterEvents(()=>{remPopup("more-gestapo");}, 52000);
     addChapterEvents(()=>{nextBackground(CONSTANTS.CHAPTER_2); }, 54900);
     addChapterEvents(()=>{setDialogText("Nous avons été emmenés, puis mis dans des trains.")}, 54900);
