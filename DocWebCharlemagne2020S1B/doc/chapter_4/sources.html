@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nos sources</title>
+    <link rel="stylesheet" href="../doc.css">
+    <script>
+        let links = [
+            "https://politique-auschwitz.blogspot.com/2013/11/les-wagons-de-la-deportation.html",
+            "https://www.feroce.co/grenier-norvege/",
+            "https://www.lelivrescolaire.fr/page/16858535",
+            "https://www.secondeguerre.net/hisetpo/bh/hp_campsconext.html",
+            "https://stolpersteine-kl.de/stolpersteine-in-kaiserslautern/biografie-heinrich-wagner/",
+            "https://www.ravensbrueck-sbg.de/en/",
+            "https://encyclopedia.ushmm.org/content/fr/gallery/rescue-photographs"
+        ];
+        let sources = [
+            "https://fr.wikipedia.org/wiki/Histoire_des_Juifs_en_Allemagne",
+            "http://reichshoffen.free.fr/Comple/familleJuive.html",
+            "https://www.feroce.co/grenier-norvege/",
+            "http://www.crdp-strasbourg.fr/data/histoire/alsace-39-45a/juifs.php",
+            "https://fr.wikipedia.org/wiki/Histoire_des_Juifs_en_France#L%E2%80%99entre-deux_guerres"
+        ]
+        window.onload = ()=>{
+            let p1 = document.getElementById("partie1");
+            links.forEach(el => {
+                let a = document.createElement("a");
+                a.href = el;
+                a.innerHTML = el;
+                a.target = "_blank";
+                a.classList.add("popup-redirect");
+                a.addEventListener("mouseover", ev=>{
+                    let div = document.getElementById("info-div");
+                    document.getElementById("info-frame").src = "";
+                    div.style.left = Math.min(ev.x+20, window.innerWidth*0.6)+"px";
+                    div.style.top = Math.min(ev.y+20, window.innerHeight*0.6)+"px";
+                    div.style.border = "solid 2px white";
+                    div.style.width = "100vw";
+                    div.style.height = "100vh";
+                    document.getElementById("info-frame").src = el;
+                })
+                a.addEventListener("mouseout", ()=>{
+                    let div = document.getElementById("info-div");
+                    div.style.border = "none";
+                    div.style.width = "0vw";
+                    div.style.height = "0vh";
+                })
+                p1.appendChild(a);
+            });
+            let p2 = document.getElementById("partie2");
+            sources.forEach(el => {
+                let a = document.createElement("a");
+                a.href = el;
+                a.innerHTML = el;
+                a.target = "_blank";
+                a.classList.add("popup-redirect");
+                a.addEventListener("mouseover", ev=>{
+                    let div = document.getElementById("info-div");
+                    document.getElementById("info-frame").src = "";
+                    div.style.left = Math.min(ev.x+20, window.innerWidth*0.6)+"px";
+                    div.style.top = Math.min(ev.y+20, window.innerHeight*0.6)+"px";
+                    div.style.border = "solid 2px white";
+                    div.style.width = "100vw";
+                    div.style.height = "100vh";
+                    document.getElementById("info-frame").src = el;
+                })
+                a.addEventListener("mouseout", ()=>{
+                    let div = document.getElementById("info-div");
+                    div.style.border = "none";
+                    div.style.width = "0vw";
+                    div.style.height = "0vh";
+                })
+                p2.appendChild(a);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1 class="titre">Nos sources</h1>
+    <div id="info-container">
+        <div id="info-div">
+            <iframe id="info-frame"></iframe>
+        </div>
+    </div>
+    <div class="container">
+        <div id ="text">
+            <h2>Sites des images utilisés</h2>
+            <div id="partie1">
+
+            </div>
+            <h2>Sites des informations utilisés</h2>
+            <div id="partie2">
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>

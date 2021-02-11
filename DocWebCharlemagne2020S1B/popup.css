@@ -1,0 +1,68 @@
+@keyframes popup-in {
+    0% {opacity: 0; transform: scale(0, 1);}
+    100% {opacity: 1; transform: scale(1, 1);}
+}
+@keyframes popup-out {
+    0% {opacity: 1; transform: scale(1, 1);}
+    100% {opacity: 0; transform: scale(0, 1);}
+}
+
+div#popup-container {
+    position: fixed;
+    top: 0px; left: 0px;
+    width: 0px; height: 0px;
+    z-index: 20;
+}
+
+div.popup-div {
+    animation: popup-in 400ms ease;
+    overflow: hidden;
+    position: fixed;
+    top: 0%; left: 0%;
+    width: fit-content; height: fit-content;
+    box-shadow: 0px 2px 12px #0006;
+    background-color: #122334BB;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 4px 6px;
+    border: solid 1px #AAA;
+    border-radius: 4px;
+    transition: transform 400ms ease, box-shadow 400ms ease, top 100ms ease, left 100ms ease, width 100ms ease, height 100ms ease;
+    cursor: pointer;
+}
+
+p.popup-title {
+    margin: 0px; padding: 0px;
+    font-family: "Roboto";
+    font-size: 20px;
+    color: #CCC;
+    border-bottom: solid 1px white;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+p.popup-desc {
+    margin: 0px; padding: 0px;
+    margin-top: 4px;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #488C9C;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+iframe.popup-frame {
+    position: fixed;
+    bottom: 0px; height: calc( 100vh - 40px );
+    left: 20px; width: calc( 100vw - 40px );
+    transform: scale(0.9);
+    display: none;
+    border: none;
+    box-shadow: 0px 0px 20px black inset;
+}
+
+div.remove-popup {
+    animation: popup-out 400ms ease forwards;
+}

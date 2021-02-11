@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../resources/fonts/Roboto-Medium.ttf");
+}
+
+body {
+    background-color: #122334;
+}
+
+p {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: #EEE;
+    margin-left: 20px;
+}
+
+p#title {
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    margin-left: 0px;
+    text-decoration: underline;
+}
+
+p.credits-fit {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 50px;
+}
